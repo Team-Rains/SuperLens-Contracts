@@ -1,0 +1,539 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "wad",
+          "type": "uint256"
+        }
+      ],
+      "name": "downgradeToETH",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "upgradeByETH",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "upgradeByETHTo",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "downgradeToETH(uint256)": "160e8be3",
+    "upgradeByETH()": "cf81464b",
+    "upgradeByETHTo(address)": "7687d19b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"wad\",\"type\":\"uint256\"}],\"name\":\"downgradeToETH\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"upgradeByETH\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"upgradeByETHTo\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Superfluid\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Super ETH (SETH) custom token interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ISETH.sol\":\"ISETHCustom\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":core/=lib/core/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":protocol-monorepo/=lib/protocol-monorepo/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"lib/openzeppelin-contracts/contracts/token/ERC777/IERC777.sol\":{\"keccak256\":\"0x385a7061f1436b079d44c140dee9387d5313e94874ff9ee877dc0085c981ac3d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1c3fe22bb0d9527356e11f267f9187134de4d4ed1ff77468b4d73e3238697b96\",\"dweb:/ipfs/Qmc8caJctgxbzXEpxRogQMR2bnBk5U67hA7kKbUEG2PUXV\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol\":{\"keccak256\":\"0xa72d8fea72c6ce0d46007cfddeee507a8aae688cfa698e34767ac32ed629dfc7\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://f965779bd0855f0959c0a99bd4c0198eaf3546f9c87da81780e815e7f58ada2d\",\"dweb:/ipfs/QmTaAh15dVoBqjwsnQSHzewvKgDmoj2of3t9P4Uzcnvtie\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperAgreement.sol\":{\"keccak256\":\"0x9b4fab6dcac1337f78e04d67d8c2b48b1de8bd4bbf14b475840f9dbda7b8f21e\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://cc2f3629ad0cb46bd4f595880591ad6c9d75a82d920cb9355e462fbf8022c820\",\"dweb:/ipfs/QmXMovxK4qpWT4yffXxUVjkMNwxEfS6mtn39mLSmjaxEdW\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperApp.sol\":{\"keccak256\":\"0x6cc4b0724d977190c7441dfc3be6c6e48b43b555c3370af32ef5b6600f15f53f\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://3e89c944642772a42429f21a11017b57deb98a9198f8e4f8749f00aaee71299e\",\"dweb:/ipfs/QmaSv9GvqikcGHJ3tcwATDHSpQw6mfnHPDtcfqcZSS7LF6\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol\":{\"keccak256\":\"0x2ccec11f964b165f64e453192793991bf28e1054069b6f709a39849a8286aeb4\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://edbaf6db0b9c6803dcdb7c91a2ddbdba503a41ecc5cecf9c27a43643669bfff1\",\"dweb:/ipfs/QmYpf7XFKrnB2ZAPf8cDqfvZDfyoxMHA1x2FQSYzDFE3KZ\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperTokenFactory.sol\":{\"keccak256\":\"0x316aa6cd16167569d5ee47fb2e4673b1def2117c7ea56969290ab6aec97cd263\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://a5eb13acce613a227c2c2b3da2b88ad6361c9e541ca59ccee0bb5cf42cffccc6\",\"dweb:/ipfs/QmceA9RWHL1BWk4cPnYY55FjAdsEi1LfXrC11RbF8Wb8eW\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol\":{\"keccak256\":\"0xab9dab941f99d0f0ef6125fb6eafde03378d7c3e94e613dd12fb7fbf594c3373\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://928c6ef915dee69058d4cfcb9f2344d4fc78d9763b47b17e5c03fbff64ba3c64\",\"dweb:/ipfs/Qmdk733ZHceatz3qbuodLCCS9TUspJJtXLoX6vWwMvrPDE\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidGovernance.sol\":{\"keccak256\":\"0x90a9259d0f0bb6b1bb6d48f051277eb75df96a9fbe684a203a3a468ad19318e2\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://9c8162a2d07ffe768920fef55292684149173afefbfba76b8fca007e55092229\",\"dweb:/ipfs/QmducLNwrzeUXEpBjUTSMu7sfmQEwVhcYXApe4brc1zQ6V\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol\":{\"keccak256\":\"0x9cad3866982902ea88df0874a563d2e4aeba5a5bcc6289c30cccf9b4099d2fb6\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://e8fd960b259331f204c7cb7dcd32b09d68f4294e3b872fad00ad467609c3ef72\",\"dweb:/ipfs/QmeZFEvsDunXQGPbXFfN5AvfKM5am1FY8Xv6e3c4tNKvgY\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ERC20WithTokenInfo.sol\":{\"keccak256\":\"0x55be78ffb441c782f612b153d7d9049e3f0dbfd412c1f7df29c896b972b2985f\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://a223c68e38a6c9b1e363e525911bc7eda44ea517865ae53bd0d34ff858cc02ae\",\"dweb:/ipfs/QmVruGehibG6Emr2A6JHwUnhd4NzsGkE24cbGqnDpEvrKh\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ISETH.sol\":{\"keccak256\":\"0x03d0c332b2dec2453fe1dfa879cb40cba5075a02f4b08740f0e6ba10f80bd577\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://c66ae1ec3af394f3062a8125068d94272527d982ba0da94811ea308793d29364\",\"dweb:/ipfs/QmdGKjBHQSoRLMuWHwcXibftc9gYA3wxg4L9Htqog1rHVw\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/TokenInfo.sol\":{\"keccak256\":\"0x7456cd394cc905aae7cdbd4601ce1c296c768c13c28e66efbb913cc070bad3e4\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://5a6589b428b724721ba5b4dd196c8f366a6e694ef313add093f29af64496c042\",\"dweb:/ipfs/QmSMgV6y8L6pyyzDz6kKmafVwujNWcjTqutpCBxe4uNRqg\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.16+commit.07a7930e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "wad",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "downgradeToETH"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "upgradeByETH"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "upgradeByETHTo"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":core/=lib/core/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        ":protocol-monorepo/=lib/protocol-monorepo/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ISETH.sol": "ISETHCustom"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777.sol": {
+        "keccak256": "0x385a7061f1436b079d44c140dee9387d5313e94874ff9ee877dc0085c981ac3d",
+        "urls": [
+          "bzz-raw://1c3fe22bb0d9527356e11f267f9187134de4d4ed1ff77468b4d73e3238697b96",
+          "dweb:/ipfs/Qmc8caJctgxbzXEpxRogQMR2bnBk5U67hA7kKbUEG2PUXV"
+        ],
+        "license": "MIT"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol": {
+        "keccak256": "0xa72d8fea72c6ce0d46007cfddeee507a8aae688cfa698e34767ac32ed629dfc7",
+        "urls": [
+          "bzz-raw://f965779bd0855f0959c0a99bd4c0198eaf3546f9c87da81780e815e7f58ada2d",
+          "dweb:/ipfs/QmTaAh15dVoBqjwsnQSHzewvKgDmoj2of3t9P4Uzcnvtie"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperAgreement.sol": {
+        "keccak256": "0x9b4fab6dcac1337f78e04d67d8c2b48b1de8bd4bbf14b475840f9dbda7b8f21e",
+        "urls": [
+          "bzz-raw://cc2f3629ad0cb46bd4f595880591ad6c9d75a82d920cb9355e462fbf8022c820",
+          "dweb:/ipfs/QmXMovxK4qpWT4yffXxUVjkMNwxEfS6mtn39mLSmjaxEdW"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperApp.sol": {
+        "keccak256": "0x6cc4b0724d977190c7441dfc3be6c6e48b43b555c3370af32ef5b6600f15f53f",
+        "urls": [
+          "bzz-raw://3e89c944642772a42429f21a11017b57deb98a9198f8e4f8749f00aaee71299e",
+          "dweb:/ipfs/QmaSv9GvqikcGHJ3tcwATDHSpQw6mfnHPDtcfqcZSS7LF6"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol": {
+        "keccak256": "0x2ccec11f964b165f64e453192793991bf28e1054069b6f709a39849a8286aeb4",
+        "urls": [
+          "bzz-raw://edbaf6db0b9c6803dcdb7c91a2ddbdba503a41ecc5cecf9c27a43643669bfff1",
+          "dweb:/ipfs/QmYpf7XFKrnB2ZAPf8cDqfvZDfyoxMHA1x2FQSYzDFE3KZ"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperTokenFactory.sol": {
+        "keccak256": "0x316aa6cd16167569d5ee47fb2e4673b1def2117c7ea56969290ab6aec97cd263",
+        "urls": [
+          "bzz-raw://a5eb13acce613a227c2c2b3da2b88ad6361c9e541ca59ccee0bb5cf42cffccc6",
+          "dweb:/ipfs/QmceA9RWHL1BWk4cPnYY55FjAdsEi1LfXrC11RbF8Wb8eW"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol": {
+        "keccak256": "0xab9dab941f99d0f0ef6125fb6eafde03378d7c3e94e613dd12fb7fbf594c3373",
+        "urls": [
+          "bzz-raw://928c6ef915dee69058d4cfcb9f2344d4fc78d9763b47b17e5c03fbff64ba3c64",
+          "dweb:/ipfs/Qmdk733ZHceatz3qbuodLCCS9TUspJJtXLoX6vWwMvrPDE"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidGovernance.sol": {
+        "keccak256": "0x90a9259d0f0bb6b1bb6d48f051277eb75df96a9fbe684a203a3a468ad19318e2",
+        "urls": [
+          "bzz-raw://9c8162a2d07ffe768920fef55292684149173afefbfba76b8fca007e55092229",
+          "dweb:/ipfs/QmducLNwrzeUXEpBjUTSMu7sfmQEwVhcYXApe4brc1zQ6V"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol": {
+        "keccak256": "0x9cad3866982902ea88df0874a563d2e4aeba5a5bcc6289c30cccf9b4099d2fb6",
+        "urls": [
+          "bzz-raw://e8fd960b259331f204c7cb7dcd32b09d68f4294e3b872fad00ad467609c3ef72",
+          "dweb:/ipfs/QmeZFEvsDunXQGPbXFfN5AvfKM5am1FY8Xv6e3c4tNKvgY"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ERC20WithTokenInfo.sol": {
+        "keccak256": "0x55be78ffb441c782f612b153d7d9049e3f0dbfd412c1f7df29c896b972b2985f",
+        "urls": [
+          "bzz-raw://a223c68e38a6c9b1e363e525911bc7eda44ea517865ae53bd0d34ff858cc02ae",
+          "dweb:/ipfs/QmVruGehibG6Emr2A6JHwUnhd4NzsGkE24cbGqnDpEvrKh"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ISETH.sol": {
+        "keccak256": "0x03d0c332b2dec2453fe1dfa879cb40cba5075a02f4b08740f0e6ba10f80bd577",
+        "urls": [
+          "bzz-raw://c66ae1ec3af394f3062a8125068d94272527d982ba0da94811ea308793d29364",
+          "dweb:/ipfs/QmdGKjBHQSoRLMuWHwcXibftc9gYA3wxg4L9Htqog1rHVw"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/TokenInfo.sol": {
+        "keccak256": "0x7456cd394cc905aae7cdbd4601ce1c296c768c13c28e66efbb913cc070bad3e4",
+        "urls": [
+          "bzz-raw://5a6589b428b724721ba5b4dd196c8f366a6e694ef313add093f29af64496c042",
+          "dweb:/ipfs/QmSMgV6y8L6pyyzDz6kKmafVwujNWcjTqutpCBxe4uNRqg"
+        ],
+        "license": "AGPLv3"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ISETH.sol",
+    "id": 45591,
+    "exportedSymbols": {
+      "ISETH": [
+        45590
+      ],
+      "ISETHCustom": [
+        45584
+      ],
+      "ISuperToken": [
+        44467
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "35:539:60",
+    "nodes": [
+      {
+        "id": 45567,
+        "nodeType": "PragmaDirective",
+        "src": "35:25:60",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".4"
+        ]
+      },
+      {
+        "id": 45569,
+        "nodeType": "ImportDirective",
+        "src": "62:60:60",
+        "nodes": [],
+        "absolutePath": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol",
+        "file": "../superfluid/ISuperToken.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 45591,
+        "sourceUnit": 44468,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 45568,
+              "name": "ISuperToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44467,
+              "src": "71:11:60",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 45584,
+        "nodeType": "ContractDefinition",
+        "src": "205:203:60",
+        "nodes": [
+          {
+            "id": 45573,
+            "nodeType": "FunctionDefinition",
+            "src": "259:41:60",
+            "nodes": [],
+            "functionSelector": "cf81464b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeByETH",
+            "nameLocation": "268:12:60",
+            "parameters": {
+              "id": 45571,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "280:2:60"
+            },
+            "returnParameters": {
+              "id": 45572,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "299:0:60"
+            },
+            "scope": 45584,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 45578,
+            "nodeType": "FunctionDefinition",
+            "src": "305:53:60",
+            "nodes": [],
+            "functionSelector": "7687d19b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeByETHTo",
+            "nameLocation": "314:14:60",
+            "parameters": {
+              "id": 45576,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 45575,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "337:2:60",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 45578,
+                  "src": "329:10:60",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 45574,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "329:7:60",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "328:12:60"
+            },
+            "returnParameters": {
+              "id": 45577,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "357:0:60"
+            },
+            "scope": 45584,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 45583,
+            "nodeType": "FunctionDefinition",
+            "src": "363:43:60",
+            "nodes": [],
+            "functionSelector": "160e8be3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "downgradeToETH",
+            "nameLocation": "372:14:60",
+            "parameters": {
+              "id": 45581,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 45580,
+                  "mutability": "mutable",
+                  "name": "wad",
+                  "nameLocation": "392:3:60",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 45583,
+                  "src": "387:8:60",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 45579,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "387:4:60",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "386:10:60"
+            },
+            "returnParameters": {
+              "id": 45582,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "405:0:60"
+            },
+            "scope": 45584,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISETHCustom",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 45570,
+          "nodeType": "StructuredDocumentation",
+          "src": "125:79:60",
+          "text": " @title Super ETH (SETH) custom token interface\n @author Superfluid"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          45584
+        ],
+        "name": "ISETHCustom",
+        "nameLocation": "215:11:60",
+        "scope": 45591,
+        "usedErrors": []
+      },
+      {
+        "id": 45590,
+        "nodeType": "ContractDefinition",
+        "src": "527:46:60",
+        "nodes": [],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 45586,
+              "name": "ISETHCustom",
+              "nameLocations": [
+                "546:11:60"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 45584,
+              "src": "546:11:60"
+            },
+            "id": 45587,
+            "nodeType": "InheritanceSpecifier",
+            "src": "546:11:60"
+          },
+          {
+            "baseName": {
+              "id": 45588,
+              "name": "ISuperToken",
+              "nameLocations": [
+                "559:11:60"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 44467,
+              "src": "559:11:60"
+            },
+            "id": 45589,
+            "nodeType": "InheritanceSpecifier",
+            "src": "559:11:60"
+          }
+        ],
+        "canonicalName": "ISETH",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 45585,
+          "nodeType": "StructuredDocumentation",
+          "src": "410:71:60",
+          "text": " @title Super ETH (SETH) full interface\n @author Superfluid"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          45590,
+          44467,
+          26702,
+          26197,
+          45612,
+          45532,
+          45584
+        ],
+        "name": "ISETH",
+        "nameLocation": "537:5:60",
+        "scope": 45591,
+        "usedErrors": [
+          44090,
+          44092,
+          44094,
+          44096,
+          44098,
+          44100,
+          44102,
+          44104,
+          44106,
+          44108,
+          44110,
+          44112,
+          45253,
+          45255,
+          45257,
+          45259,
+          45261,
+          45263
+        ]
+      }
+    ],
+    "license": "AGPLv3"
+  },
+  "id": 60
+}
