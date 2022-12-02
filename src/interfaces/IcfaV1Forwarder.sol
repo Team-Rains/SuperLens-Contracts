@@ -166,4 +166,60 @@ interface IcfaV1Forwarder {
         address receiver,
         bytes memory userData
     ) external returns (bool);
+
+    /**
+     * @notice Grants a flowOperator permission to create/update/delete flows on behalf of msg.sender.
+     * In order to restrict what a flowOperator can or can't do, the flowOperator account
+     * should be a contract implementing the desired restrictions.
+     * @param token Super token address
+     * @param flowOperator Account to which permissions are granted
+     * @return bool
+     */
+    function grantPermissions(ISuperToken token, address flowOperator)
+        external
+        returns (bool);
+
+    /**
+     * @notice Revokes all permissions previously granted to a flowOperator by msg.sender.
+     * Revocation doesn't undo or reset flows previously created/updated by the flowOperator.
+     * In order to be sure about the state of flows at the time of revocation, you need to check that state
+     * either in the same transaction or after this transaction.
+     * @param token Super token address
+     * @param flowOperator Account from which permissions are revoked
+     * @return bool
+     */
+    function revokePermissions(ISuperToken token, address flowOperator)
+        external
+        returns (bool);
+
+    /**
+     * @notice Low-level wrapper of `IConstantFlowAgreementV1.updateFlowOperatorPermissions`
+     * @param token Super token address
+     * @param flowOperator Account for which permissions are set on behalf of msg.sender
+     * @param permissions Bitmask for create/update/delete permission flags. See library `FlowOperatorDefinitions`
+     * @param flowrateAllowance Max. flowrate in wad/second the operator can set for individual flows.
+     * @return bool
+     * @notice flowrateAllowance does NOT restrict the net flowrate a flowOperator is able to set.
+     * In order to restrict that, flowOperator needs to be a contract implementing the wanted limitations.
+     */
+    function updateFlowOperatorPermissions(
+        ISuperToken token,
+        address flowOperator,
+        uint8 permissions,
+        int96 flowrateAllowance
+    ) external returns (bool);
+
+    /**
+     * @notice Get the currently set permissions granted to the given flowOperator by the given sender account.
+     * @param token Super token address
+     * @param sender The account which (possiby) granted permissions
+     * @param flowOperator Account to which (possibly) permissions were granted
+     * @return permissions A bitmask of the permissions currently granted (or not) by `sender` to `flowOperator`
+     * @return flowrateAllowance Max. flowrate in wad/second the flowOperator can set for individual flows.
+     */
+    function getFlowOperatorPermissions(
+        ISuperToken token,
+        address sender,
+        address flowOperator
+    ) external view returns (uint8 permissions, int96 flowrateAllowance);
 }
