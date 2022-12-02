@@ -12,8 +12,8 @@
   },
   "files": {
     "lib/custom-supertokens/contracts/PureSuperToken.sol": {
-      "lastModificationDate": 1669983900712,
-      "contentHash": "9446d5950dfe558b2db8f190e4e31c62",
+      "lastModificationDate": 1670016725391,
+      "contentHash": "75ee52e5def0ae23759cd2ccd4b5699e",
       "sourceName": "lib/custom-supertokens/contracts/PureSuperToken.sol",
       "solcConfig": {
         "settings": {
@@ -4608,8 +4608,8 @@
       }
     },
     "src/StreamManager.sol": {
-      "lastModificationDate": 1670016298552,
-      "contentHash": "0de09a6475516b3c0db7847ca9bb02c6",
+      "lastModificationDate": 1670021043415,
+      "contentHash": "c7436786b2f0a43dd89b3e2164a3eb0f",
       "sourceName": "src/StreamManager.sol",
       "solcConfig": {
         "settings": {
@@ -4650,6 +4650,7 @@
         "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777.sol",
         "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/apps/CFAv1Library.sol",
         "lib/protocol-monorepo/packages/ethereum-contracts/contracts/apps/SuperAppBase.sol",
         "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol",
         "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol",

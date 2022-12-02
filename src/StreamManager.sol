@@ -2,14 +2,15 @@
 pragma solidity ^0.8.15;
 
 import {SuperAppBase} from "protocol-monorepo/packages/ethereum-contracts/contracts/apps/SuperAppBase.sol";
+import {CFAv1Library} from "protocol-monorepo/packages/ethereum-contracts/contracts/apps/CFAv1Library.sol";
 import {PureSuperToken} from "lib/custom-supertokens/contracts/PureSuperToken.sol";
 import {Initializable} from "openzeppelin-contracts/proxy/utils/Initializable.sol";
-import {IcfaV1Forwarder, ISuperToken, ISuperfluid} from "./interfaces/IcfaV1Forwarder.sol";
+import {IcfaV1Forwarder, ISuperToken, ISuperfluid, IConstantFlowAgreementV1} from "./interfaces/IcfaV1Forwarder.sol";
 import {IERC721Mod} from "./interfaces/IERC721Mod.sol";
 import {IStreamManager} from "./interfaces/IStreamManager.sol";
 import "forge-std/console.sol";
 
-// TODO: Add `Ownable`.
+// TODO: Add `Ownable`?
 // TODO: [Optional] multi tier system.
 contract StreamManager is
     IStreamManager,
@@ -17,18 +18,22 @@ contract StreamManager is
     SuperAppBase,
     Initializable
 {
+    using CFAv1Library for CFAv1Library.InitData;
+
     address CREATOR;
 
     // TODO: Change this to `IStakingContract`.
     address STAKING_CONTRACT;
 
-    ISuperToken PAYMENT_TOKEN;
+    ISuperToken public PAYMENT_TOKEN;
 
-    PureSuperToken SOCIAL_TOKEN;
+    PureSuperToken public SOCIAL_TOKEN;
 
-    IcfaV1Forwarder FORWARDER;
+    IcfaV1Forwarder public FORWARDER;
 
-    address HOST;
+    CFAv1Library.InitData public CFA_V1;
+
+    address public HOST;
 
     int96 paymentFlowrate;
 
@@ -39,6 +44,7 @@ contract StreamManager is
         address _stakingContract,
         address _forwarder,
         address _host,
+        address _cfa,
         int96 _paymentFlowrate
     ) external initializer {
         if (
@@ -54,6 +60,10 @@ contract StreamManager is
         HOST = _host;
         CREATOR = _creator;
         paymentFlowrate = _paymentFlowrate;
+        CFA_V1 = CFAv1Library.InitData({
+            host: ISuperfluid(_host),
+            cfa: IConstantFlowAgreementV1(_cfa)
+        });
     }
 
     function balanceOf(address _subscriber)
@@ -139,40 +149,36 @@ contract StreamManager is
             stakingContractFlowrateDelta;
 
         // Increase the flowrate to staking contract (10% of the original flowrate).
-        if (
-            !forwarder.setFlowrate(
-                paymentToken,
-                STAKING_CONTRACT,
-                stakingContractRate + stakingContractFlowrateDelta
-            )
-        )
-            revert FlowrateChangeFailed(
-                stakingContractRate + stakingContractFlowrateDelta,
-                stakingContractRate
-            );
+        _newCtx = CFA_V1.createFlowWithCtx(
+            _newCtx,
+            STAKING_CONTRACT,
+            PAYMENT_TOKEN,
+            stakingContractRate + stakingContractFlowrateDelta
+        );
 
         // Increase the flowrate to creator (90% of original flowrate).
-        if (
-            !forwarder.setFlowrate(
-                paymentToken,
-                CREATOR,
-                creatorRate + creatorFlowrateDelta
-            )
-        )
-            revert FlowrateChangeFailed(
-                creatorRate + creatorFlowrateDelta,
-                creatorRate
-            );
+        _newCtx = CFA_V1.createFlowWithCtx(
+            _newCtx,
+            STAKING_CONTRACT,
+            PAYMENT_TOKEN,
+            creatorRate + creatorFlowrateDelta
+        );
     }
 
     function afterAgreementUpdated(
         ISuperToken _superToken,
         address, /*_agreementClass*/
         bytes32, /*_agreementId*/
-        bytes calldata /*_agreementData*/,
+        bytes calldata, /*_agreementData*/
         bytes calldata, /*_cbdata*/
         bytes calldata /*_ctx*/
-    ) external override returns (bytes memory /*_newCtx*/) {
+    )
+        external
+        override
+        returns (
+            bytes memory /*_newCtx*/
+        )
+    {
         revert UpdatesNotPermitted();
     }
 
@@ -240,17 +246,19 @@ contract StreamManager is
             // TODO: Try/Catch enclosure to catch errors when setting new flowrate fails.
 
             // Decrease the flowrate to staking contract (10% of the original flowrate).
-            forwarder.setFlowrate(
-                paymentToken,
+            _newCtx = CFA_V1.createFlowWithCtx(
+                _newCtx,
                 STAKING_CONTRACT,
-                stakingContractRate - stakingContractFlowrateDelta
+                PAYMENT_TOKEN,
+                stakingContractRate + stakingContractFlowrateDelta
             );
 
-            // Decrease the flowrate to creator (90% of original flowrate).
-            forwarder.setFlowrate(
-                paymentToken,
-                CREATOR,
-                creatorRate - creatorFlowrateDelta
+            // Decrease the flowrate to staking contract (10% of the original flowrate).
+            _newCtx = CFA_V1.createFlowWithCtx(
+                _newCtx,
+                STAKING_CONTRACT,
+                PAYMENT_TOKEN,
+                creatorRate + creatorFlowrateDelta
             );
         }
     }
