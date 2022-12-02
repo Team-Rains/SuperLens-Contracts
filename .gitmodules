@@ -12,3 +12,4 @@
 [submodule "lib/core"]
 	path = lib/core
 	url = https://github.com/lens-protocol/core
+	branch = main

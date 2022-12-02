@@ -1,0 +1,5 @@
+core/=lib/core/contracts/
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+protocol-monorepo/=lib/protocol-monorepo/
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
