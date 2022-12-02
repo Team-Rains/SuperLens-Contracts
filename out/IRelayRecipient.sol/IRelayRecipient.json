@@ -47,7 +47,7 @@
     "isTrustedForwarder(address)": "572b6c05",
     "versionRecipient()": "486ff0cd"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"}],\"name\":\"isTrustedForwarder\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"versionRecipient\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Superfluid\",\"details\":\"A contract must implement this interface in order to support relayed transactionsIt is better to inherit the BaseRelayRecipient as its implementation\",\"kind\":\"dev\",\"methods\":{\"isTrustedForwarder(address)\":{\"details\":\"the forwarder is required to verify the sender's signature, and verify      the call is not a replay.\"},\"versionRecipient()\":{\"details\":\"EIP 2771 version NOTE: - It is not clear if it is actually from the EIP 2771.... - https://docs.biconomy.io/guides/enable-gasless-transactions/eip-2771\"}},\"title\":\"Relay recipient interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isTrustedForwarder(address)\":{\"notice\":\"Returns if the forwarder is trusted to forward relayed transactions to us.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/utils/IRelayRecipient.sol\":\"IRelayRecipient\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":core/=lib/core/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":protocol-monorepo/=lib/protocol-monorepo/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/utils/IRelayRecipient.sol\":{\"keccak256\":\"0x48be4e1e60309d0dda0a0b41d7f3c1cbb69165aafd5de020c30ffef2c7fe710e\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://662d81566b9035066141f1de7acfd04681b7192bcad19779f057ae0207aae96b\",\"dweb:/ipfs/QmQuahuqDrnccGdZBCgWMjV8mfVLJBqngr8yhTDwdvkyzw\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"}],\"name\":\"isTrustedForwarder\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"versionRecipient\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Superfluid\",\"details\":\"A contract must implement this interface in order to support relayed transactionsIt is better to inherit the BaseRelayRecipient as its implementation\",\"kind\":\"dev\",\"methods\":{\"isTrustedForwarder(address)\":{\"details\":\"the forwarder is required to verify the sender's signature, and verify      the call is not a replay.\"},\"versionRecipient()\":{\"details\":\"EIP 2771 version NOTE: - It is not clear if it is actually from the EIP 2771.... - https://docs.biconomy.io/guides/enable-gasless-transactions/eip-2771\"}},\"title\":\"Relay recipient interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isTrustedForwarder(address)\":{\"notice\":\"Returns if the forwarder is trusted to forward relayed transactions to us.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/utils/IRelayRecipient.sol\":\"IRelayRecipient\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@superfluid-finance/=lib/protocol-monorepo/packages/\",\":core/=lib/core/contracts/\",\":custom-supertokens/=lib/custom-supertokens/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":protocol-monorepo/=lib/protocol-monorepo/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/utils/IRelayRecipient.sol\":{\"keccak256\":\"0x48be4e1e60309d0dda0a0b41d7f3c1cbb69165aafd5de020c30ffef2c7fe710e\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://662d81566b9035066141f1de7acfd04681b7192bcad19779f057ae0207aae96b\",\"dweb:/ipfs/QmQuahuqDrnccGdZBCgWMjV8mfVLJBqngr8yhTDwdvkyzw\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.16+commit.07a7930e"
@@ -113,7 +113,9 @@
     "settings": {
       "remappings": [
         ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":@superfluid-finance/=lib/protocol-monorepo/packages/",
         ":core/=lib/core/contracts/",
+        ":custom-supertokens/=lib/custom-supertokens/contracts/",
         ":ds-test/=lib/forge-std/lib/ds-test/src/",
         ":forge-std/=lib/forge-std/src/",
         ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
@@ -146,19 +148,19 @@
   },
   "ast": {
     "absolutePath": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/utils/IRelayRecipient.sol",
-    "id": 45631,
+    "id": 46079,
     "exportedSymbols": {
       "IRelayRecipient": [
-        45630
+        46078
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "35:987:62",
+    "src": "35:987:68",
     "nodes": [
       {
-        "id": 45614,
+        "id": 46062,
         "nodeType": "PragmaDirective",
-        "src": "35:25:62",
+        "src": "35:25:68",
         "nodes": [],
         "literals": [
           "solidity",
@@ -168,19 +170,19 @@
         ]
       },
       {
-        "id": 45630,
+        "id": 46078,
         "nodeType": "ContractDefinition",
-        "src": "404:617:62",
+        "src": "404:617:68",
         "nodes": [
           {
-            "id": 45623,
+            "id": 46071,
             "nodeType": "FunctionDefinition",
-            "src": "664:75:62",
+            "src": "664:75:68",
             "nodes": [],
             "documentation": {
-              "id": 45616,
+              "id": 46064,
               "nodeType": "StructuredDocumentation",
-              "src": "437:222:62",
+              "src": "437:222:68",
               "text": " @notice Returns if the forwarder is trusted to forward relayed transactions to us.\n @dev the forwarder is required to verify the sender's signature, and verify\n      the call is not a replay."
             },
             "functionSelector": "572b6c05",
@@ -188,20 +190,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "isTrustedForwarder",
-            "nameLocation": "673:18:62",
+            "nameLocation": "673:18:68",
             "parameters": {
-              "id": 45619,
+              "id": 46067,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45618,
+                  "id": 46066,
                   "mutability": "mutable",
                   "name": "forwarder",
-                  "nameLocation": "700:9:62",
+                  "nameLocation": "700:9:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45623,
-                  "src": "692:17:62",
+                  "scope": 46071,
+                  "src": "692:17:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -209,10 +211,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 45617,
+                    "id": 46065,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "692:7:62",
+                    "src": "692:7:68",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -222,21 +224,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "691:19:62"
+              "src": "691:19:68"
             },
             "returnParameters": {
-              "id": 45622,
+              "id": 46070,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45621,
+                  "id": 46069,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45623,
-                  "src": "733:4:62",
+                  "scope": 46071,
+                  "src": "733:4:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -244,10 +246,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 45620,
+                    "id": 46068,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "733:4:62",
+                    "src": "733:4:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -256,22 +258,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "732:6:62"
+              "src": "732:6:68"
             },
-            "scope": 45630,
+            "scope": 46078,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 45629,
+            "id": 46077,
             "nodeType": "FunctionDefinition",
-            "src": "953:66:62",
+            "src": "953:66:68",
             "nodes": [],
             "documentation": {
-              "id": 45624,
+              "id": 46072,
               "nodeType": "StructuredDocumentation",
-              "src": "745:203:62",
+              "src": "745:203:68",
               "text": " @dev EIP 2771 version\n NOTE:\n - It is not clear if it is actually from the EIP 2771....\n - https://docs.biconomy.io/guides/enable-gasless-transactions/eip-2771"
             },
             "functionSelector": "486ff0cd",
@@ -279,26 +281,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "versionRecipient",
-            "nameLocation": "962:16:62",
+            "nameLocation": "962:16:68",
             "parameters": {
-              "id": 45625,
+              "id": 46073,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "978:2:62"
+              "src": "978:2:68"
             },
             "returnParameters": {
-              "id": 45628,
+              "id": 46076,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45627,
+                  "id": 46075,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45629,
-                  "src": "1004:13:62",
+                  "scope": 46077,
+                  "src": "1004:13:68",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -306,10 +308,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 45626,
+                    "id": 46074,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1004:6:62",
+                    "src": "1004:6:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -318,9 +320,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1003:15:62"
+              "src": "1003:15:68"
             },
-            "scope": 45630,
+            "scope": 46078,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -332,22 +334,22 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 45615,
+          "id": 46063,
           "nodeType": "StructuredDocumentation",
-          "src": "171:232:62",
+          "src": "171:232:68",
           "text": " @title Relay recipient interface\n @author Superfluid\n @dev A contract must implement this interface in order to support relayed transactions\n @dev It is better to inherit the BaseRelayRecipient as its implementation"
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          45630
+          46078
         ],
         "name": "IRelayRecipient",
-        "nameLocation": "414:15:62",
-        "scope": 45631,
+        "nameLocation": "414:15:68",
+        "scope": 46079,
         "usedErrors": []
       }
     ],
     "license": "AGPLv3"
   },
-  "id": 62
+  "id": 68
 }

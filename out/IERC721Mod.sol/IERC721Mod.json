@@ -114,19 +114,19 @@
   },
   "ast": {
     "absolutePath": "src/interfaces/IERC721Mod.sol",
-    "id": 12066,
+    "id": 56596,
     "exportedSymbols": {
       "IERC721Mod": [
-        12065
+        56595
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "51:210:23",
+    "src": "51:210:97",
     "nodes": [
       {
-        "id": 12056,
+        "id": 56586,
         "nodeType": "PragmaDirective",
-        "src": "51:24:23",
+        "src": "51:24:97",
         "nodes": [],
         "literals": [
           "solidity",
@@ -136,19 +136,19 @@
         ]
       },
       {
-        "id": 12065,
+        "id": 56595,
         "nodeType": "ContractDefinition",
-        "src": "77:184:23",
+        "src": "77:184:97",
         "nodes": [
           {
-            "id": 12064,
+            "id": 56594,
             "nodeType": "FunctionDefinition",
-            "src": "185:74:23",
+            "src": "185:74:97",
             "nodes": [],
             "documentation": {
-              "id": 12057,
+              "id": 56587,
               "nodeType": "StructuredDocumentation",
-              "src": "104:76:23",
+              "src": "104:76:97",
               "text": " @dev Returns the number of tokens in ``owner``'s account."
             },
             "functionSelector": "70a08231",
@@ -156,20 +156,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "balanceOf",
-            "nameLocation": "194:9:23",
+            "nameLocation": "194:9:97",
             "parameters": {
-              "id": 12060,
+              "id": 56590,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12059,
+                  "id": 56589,
                   "mutability": "mutable",
                   "name": "owner",
-                  "nameLocation": "212:5:23",
+                  "nameLocation": "212:5:97",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12064,
-                  "src": "204:13:23",
+                  "scope": 56594,
+                  "src": "204:13:97",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -177,10 +177,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 12058,
+                    "id": 56588,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "204:7:23",
+                    "src": "204:7:97",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -190,21 +190,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "203:15:23"
+              "src": "203:15:97"
             },
             "returnParameters": {
-              "id": 12063,
+              "id": 56593,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12062,
+                  "id": 56592,
                   "mutability": "mutable",
                   "name": "balance",
-                  "nameLocation": "250:7:23",
+                  "nameLocation": "250:7:97",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12064,
-                  "src": "242:15:23",
+                  "scope": 56594,
+                  "src": "242:15:97",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -212,10 +212,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 12061,
+                    "id": 56591,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "242:7:23",
+                    "src": "242:7:97",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -224,9 +224,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "241:17:23"
+              "src": "241:17:97"
             },
-            "scope": 12065,
+            "scope": 56595,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -239,15 +239,15 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          12065
+          56595
         ],
         "name": "IERC721Mod",
-        "nameLocation": "87:10:23",
-        "scope": 12066,
+        "nameLocation": "87:10:97",
+        "scope": 56596,
         "usedErrors": []
       }
     ],
     "license": "SEE LICENSE IN LICENSE"
   },
-  "id": 23
+  "id": 97
 }

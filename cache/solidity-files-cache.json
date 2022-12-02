@@ -12,7 +12,7 @@
   },
   "files": {
     "lib/custom-supertokens/contracts/PureSuperToken.sol": {
-      "lastModificationDate": 1669983900712,
+      "lastModificationDate": 1670010862483,
       "contentHash": "9446d5950dfe558b2db8f190e4e31c62",
       "sourceName": "lib/custom-supertokens/contracts/PureSuperToken.sol",
       "solcConfig": {
@@ -64,12 +64,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "PureSuperToken": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "PureSuperToken.sol/PureSuperToken.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "PureSuperToken.sol/PureSuperToken.json"
         }
       }
     },
     "lib/custom-supertokens/contracts/base/SuperTokenBase.sol": {
-      "lastModificationDate": 1669983900712,
+      "lastModificationDate": 1670010862483,
       "contentHash": "ca7475cc90ee18cd46c8bf67fb80ae96",
       "sourceName": "lib/custom-supertokens/contracts/base/SuperTokenBase.sol",
       "solcConfig": {
@@ -120,12 +120,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "SuperTokenBase": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperTokenBase.sol/SuperTokenBase.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperTokenBase.sol/SuperTokenBase.json"
         }
       }
     },
     "lib/custom-supertokens/contracts/base/SuperTokenStorage.sol": {
-      "lastModificationDate": 1669983900712,
+      "lastModificationDate": 1670010862483,
       "contentHash": "abfed089ed4b93e6e96dfcf5c15f63f5",
       "sourceName": "lib/custom-supertokens/contracts/base/SuperTokenStorage.sol",
       "solcConfig": {
@@ -160,12 +160,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "SuperTokenStorage": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperTokenStorage.sol/SuperTokenStorage.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperTokenStorage.sol/SuperTokenStorage.json"
         }
       }
     },
     "lib/custom-supertokens/contracts/base/UUPSProxy.sol": {
-      "lastModificationDate": 1669983900713,
+      "lastModificationDate": 1670010862483,
       "contentHash": "47e9093e788202c04d6478e568577100",
       "sourceName": "lib/custom-supertokens/contracts/base/UUPSProxy.sol",
       "solcConfig": {
@@ -202,12 +202,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "UUPSProxy": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "UUPSProxy.sol/UUPSProxy.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "UUPSProxy.sol/UUPSProxy.json"
         }
       }
     },
     "lib/forge-std/lib/ds-test/src/test.sol": {
-      "lastModificationDate": 1669952010675,
+      "lastModificationDate": 1669982893542,
       "contentHash": "962996f0e05d5218857a538a62d7c47e",
       "sourceName": "lib/forge-std/lib/ds-test/src/test.sol",
       "solcConfig": {
@@ -242,12 +242,12 @@
       "versionRequirement": ">=0.5.0",
       "artifacts": {
         "DSTest": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "test.sol/DSTest.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "test.sol/DSTest.json"
         }
       }
     },
     "lib/forge-std/src/Common.sol": {
-      "lastModificationDate": 1669952010402,
+      "lastModificationDate": 1669982893542,
       "contentHash": "385215973dee04c2a4bfefa3a37e253c",
       "sourceName": "lib/forge-std/src/Common.sol",
       "solcConfig": {
@@ -295,12 +295,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "CommonBase": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Common.sol/CommonBase.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Common.sol/CommonBase.json"
         }
       }
     },
     "lib/forge-std/src/Components.sol": {
-      "lastModificationDate": 1669952010402,
+      "lastModificationDate": 1669982893542,
       "contentHash": "745a7e4623550699a5e0333bcf4f0184",
       "sourceName": "lib/forge-std/src/Components.sol",
       "solcConfig": {
@@ -347,12 +347,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "Components": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Components.sol/Components.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Components.sol/Components.json"
         }
       }
     },
     "lib/forge-std/src/Script.sol": {
-      "lastModificationDate": 1669952010403,
+      "lastModificationDate": 1669982893542,
       "contentHash": "a0d7ca329f3374a1698e48c493ab4f1a",
       "sourceName": "lib/forge-std/src/Script.sol",
       "solcConfig": {
@@ -401,15 +401,15 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "Script": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Script.sol/Script.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Script.sol/Script.json"
         },
         "ScriptBase": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Script.sol/ScriptBase.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Script.sol/ScriptBase.json"
         }
       }
     },
     "lib/forge-std/src/StdAssertions.sol": {
-      "lastModificationDate": 1669952010404,
+      "lastModificationDate": 1669982893543,
       "contentHash": "d3f7487aaf77c715fdbdea89ea4f8399",
       "sourceName": "lib/forge-std/src/StdAssertions.sol",
       "solcConfig": {
@@ -447,12 +447,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "StdAssertions": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StdAssertions.sol/StdAssertions.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StdAssertions.sol/StdAssertions.json"
         }
       }
     },
     "lib/forge-std/src/StdCheats.sol": {
-      "lastModificationDate": 1669952010405,
+      "lastModificationDate": 1669982893543,
       "contentHash": "e7337996cb2aa604814b2994c9e65826",
       "sourceName": "lib/forge-std/src/StdCheats.sol",
       "solcConfig": {
@@ -490,15 +490,15 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "StdCheats": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StdCheats.sol/StdCheats.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StdCheats.sol/StdCheats.json"
         },
         "StdCheatsSafe": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StdCheats.sol/StdCheatsSafe.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StdCheats.sol/StdCheatsSafe.json"
         }
       }
     },
     "lib/forge-std/src/StdError.sol": {
-      "lastModificationDate": 1669952010405,
+      "lastModificationDate": 1669982893543,
       "contentHash": "64c896e1276a291776e5ea5aecb3870a",
       "sourceName": "lib/forge-std/src/StdError.sol",
       "solcConfig": {
@@ -533,12 +533,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "stdError": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StdError.sol/stdError.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StdError.sol/stdError.json"
         }
       }
     },
     "lib/forge-std/src/StdJson.sol": {
-      "lastModificationDate": 1669952010406,
+      "lastModificationDate": 1669982893543,
       "contentHash": "1df82178ad2d4556c856d0ca4b8f614d",
       "sourceName": "lib/forge-std/src/StdJson.sol",
       "solcConfig": {
@@ -575,12 +575,12 @@
       "versionRequirement": ">=0.6.0, <0.9.0",
       "artifacts": {
         "stdJson": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StdJson.sol/stdJson.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StdJson.sol/stdJson.json"
         }
       }
     },
     "lib/forge-std/src/StdMath.sol": {
-      "lastModificationDate": 1669952010422,
+      "lastModificationDate": 1669982893543,
       "contentHash": "9da8f453eba6bb98f3d75bc6822bfb29",
       "sourceName": "lib/forge-std/src/StdMath.sol",
       "solcConfig": {
@@ -615,12 +615,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "stdMath": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StdMath.sol/stdMath.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StdMath.sol/stdMath.json"
         }
       }
     },
     "lib/forge-std/src/StdStorage.sol": {
-      "lastModificationDate": 1669952010423,
+      "lastModificationDate": 1669982893543,
       "contentHash": "3f1bd6d72997330e2f556ececa8114a7",
       "sourceName": "lib/forge-std/src/StdStorage.sol",
       "solcConfig": {
@@ -657,15 +657,15 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "stdStorage": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StdStorage.sol/stdStorage.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StdStorage.sol/stdStorage.json"
         },
         "stdStorageSafe": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StdStorage.sol/stdStorageSafe.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StdStorage.sol/stdStorageSafe.json"
         }
       }
     },
     "lib/forge-std/src/StdUtils.sol": {
-      "lastModificationDate": 1669952010424,
+      "lastModificationDate": 1669982893543,
       "contentHash": "1d1d6bf7b4609a675d06cc41f8dcd5ad",
       "sourceName": "lib/forge-std/src/StdUtils.sol",
       "solcConfig": {
@@ -702,12 +702,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "StdUtils": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StdUtils.sol/StdUtils.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StdUtils.sol/StdUtils.json"
         }
       }
     },
     "lib/forge-std/src/Test.sol": {
-      "lastModificationDate": 1669952010424,
+      "lastModificationDate": 1669982893543,
       "contentHash": "23c73ad6c59f5d629042303f8ffc1359",
       "sourceName": "lib/forge-std/src/Test.sol",
       "solcConfig": {
@@ -756,15 +756,15 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "Test": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Test.sol/Test.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Test.sol/Test.json"
         },
         "TestBase": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Test.sol/TestBase.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Test.sol/TestBase.json"
         }
       }
     },
     "lib/forge-std/src/Vm.sol": {
-      "lastModificationDate": 1669952010425,
+      "lastModificationDate": 1669982893543,
       "contentHash": "af4e1189b1763fe0d73a21d17cc2ea9c",
       "sourceName": "lib/forge-std/src/Vm.sol",
       "solcConfig": {
@@ -799,15 +799,15 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "Vm": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Vm.sol/Vm.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Vm.sol/Vm.json"
         },
         "VmSafe": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Vm.sol/VmSafe.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Vm.sol/VmSafe.json"
         }
       }
     },
     "lib/forge-std/src/console.sol": {
-      "lastModificationDate": 1669952010427,
+      "lastModificationDate": 1669982893544,
       "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
       "sourceName": "lib/forge-std/src/console.sol",
       "solcConfig": {
@@ -842,12 +842,12 @@
       "versionRequirement": ">=0.4.22, <0.9.0",
       "artifacts": {
         "console": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "console.sol/console.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "console.sol/console.json"
         }
       }
     },
     "lib/forge-std/src/console2.sol": {
-      "lastModificationDate": 1669952010428,
+      "lastModificationDate": 1669982893544,
       "contentHash": "493035087920d89b7c215d662e53ace3",
       "sourceName": "lib/forge-std/src/console2.sol",
       "solcConfig": {
@@ -882,12 +882,12 @@
       "versionRequirement": ">=0.4.22, <0.9.0",
       "artifacts": {
         "console2": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "console2.sol/console2.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "console2.sol/console2.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/access/AccessControl.sol": {
-      "lastModificationDate": 1669960941276,
+      "lastModificationDate": 1670010506379,
       "contentHash": "95a6c227d1b8843e9385518a5bce4853",
       "sourceName": "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
       "solcConfig": {
@@ -929,12 +929,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "AccessControl": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "AccessControl.sol/AccessControl.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "AccessControl.sol/AccessControl.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/access/AccessControlEnumerable.sol": {
-      "lastModificationDate": 1669960941276,
+      "lastModificationDate": 1670010506379,
       "contentHash": "b6d9b165dc57e9ad8153bdca05c783a4",
       "sourceName": "lib/openzeppelin-contracts/contracts/access/AccessControlEnumerable.sol",
       "solcConfig": {
@@ -979,12 +979,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "AccessControlEnumerable": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "AccessControlEnumerable.sol/AccessControlEnumerable.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "AccessControlEnumerable.sol/AccessControlEnumerable.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/access/IAccessControl.sol": {
-      "lastModificationDate": 1669960941277,
+      "lastModificationDate": 1670010506380,
       "contentHash": "57c84298234411cea19c7c284d86be8b",
       "sourceName": "lib/openzeppelin-contracts/contracts/access/IAccessControl.sol",
       "solcConfig": {
@@ -1019,12 +1019,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IAccessControl": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IAccessControl.sol/IAccessControl.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IAccessControl.sol/IAccessControl.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/access/IAccessControlEnumerable.sol": {
-      "lastModificationDate": 1669960941277,
+      "lastModificationDate": 1670010506380,
       "contentHash": "4e71cc90682e109e999ce2bd329f6572",
       "sourceName": "lib/openzeppelin-contracts/contracts/access/IAccessControlEnumerable.sol",
       "solcConfig": {
@@ -1061,12 +1061,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IAccessControlEnumerable": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IAccessControlEnumerable.sol/IAccessControlEnumerable.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IAccessControlEnumerable.sol/IAccessControlEnumerable.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1669960941277,
+      "lastModificationDate": 1670010506380,
       "contentHash": "e436cea06129be2c73cda4b1acc848b5",
       "sourceName": "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
       "solcConfig": {
@@ -1103,12 +1103,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "Ownable": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Ownable.sol/Ownable.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Ownable.sol/Ownable.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol": {
-      "lastModificationDate": 1669960941323,
+      "lastModificationDate": 1670010506403,
       "contentHash": "40b3d81a836d50ff47e03893dcaaf204",
       "sourceName": "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
       "solcConfig": {
@@ -1143,12 +1143,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "Proxy": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Proxy.sol/Proxy.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Proxy.sol/Proxy.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol": {
-      "lastModificationDate": 1669960946746,
+      "lastModificationDate": 1670010506404,
       "contentHash": "a8db4cae435200b0e429619c853df716",
       "sourceName": "lib/openzeppelin-contracts/contracts/proxy/utils/Initializable.sol",
       "solcConfig": {
@@ -1185,12 +1185,12 @@
       "versionRequirement": "^0.8.2",
       "artifacts": {
         "Initializable": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Initializable.sol/Initializable.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Initializable.sol/Initializable.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1669960941332,
+      "lastModificationDate": 1670010506407,
       "contentHash": "834a0dde221759af42b030253315b086",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
@@ -1229,12 +1229,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "ERC20": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ERC20.sol/ERC20.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ERC20.sol/ERC20.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1669960941332,
+      "lastModificationDate": 1670010506407,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
@@ -1269,12 +1269,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IERC20": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IERC20.sol/IERC20.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IERC20.sol/IERC20.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1669960941338,
+      "lastModificationDate": 1670010506408,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
@@ -1311,12 +1311,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IERC20Metadata": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IERC20Metadata.sol/IERC20Metadata.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IERC20Metadata.sol/IERC20Metadata.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
-      "lastModificationDate": 1669960946751,
+      "lastModificationDate": 1670010506408,
       "contentHash": "fb77f144244b9ab12533aa6ce85ef8c5",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
       "solcConfig": {
@@ -1351,12 +1351,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IERC20Permit": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "draft-IERC20Permit.sol/IERC20Permit.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "draft-IERC20Permit.sol/IERC20Permit.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol": {
-      "lastModificationDate": 1669960946752,
+      "lastModificationDate": 1670010506408,
       "contentHash": "0320a90f714843ca19373ed143fc4466",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol",
       "solcConfig": {
@@ -1395,12 +1395,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "SafeERC20": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SafeERC20.sol/SafeERC20.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SafeERC20.sol/SafeERC20.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777.sol": {
-      "lastModificationDate": 1669960941349,
+      "lastModificationDate": 1670010506411,
       "contentHash": "35b56a00de0fb16f9e6a8d7464d31b0b",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777.sol",
       "solcConfig": {
@@ -1435,12 +1435,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IERC777": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IERC777.sol/IERC777.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IERC777.sol/IERC777.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777Recipient.sol": {
-      "lastModificationDate": 1669960941349,
+      "lastModificationDate": 1670010506411,
       "contentHash": "268af1696d7a83a7e78a1a8f5ba1c685",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777Recipient.sol",
       "solcConfig": {
@@ -1475,12 +1475,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IERC777Recipient": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IERC777Recipient.sol/IERC777Recipient.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IERC777Recipient.sol/IERC777Recipient.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777Sender.sol": {
-      "lastModificationDate": 1669960941350,
+      "lastModificationDate": 1670010506411,
       "contentHash": "7c1ce5bc5bc5f57fe7106ba767063e08",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777Sender.sol",
       "solcConfig": {
@@ -1515,12 +1515,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IERC777Sender": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IERC777Sender.sol/IERC777Sender.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IERC777Sender.sol/IERC777Sender.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
-      "lastModificationDate": 1669960946753,
+      "lastModificationDate": 1670010506412,
       "contentHash": "f31ad6fc4bbf9c06203987220156a6ba",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/Address.sol",
       "solcConfig": {
@@ -1555,12 +1555,12 @@
       "versionRequirement": "^0.8.1",
       "artifacts": {
         "Address": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Address.sol/Address.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Address.sol/Address.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/Context.sol": {
-      "lastModificationDate": 1669960941353,
+      "lastModificationDate": 1670010506412,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/Context.sol",
       "solcConfig": {
@@ -1595,12 +1595,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "Context": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Context.sol/Context.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Context.sol/Context.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1669960941355,
+      "lastModificationDate": 1670010506413,
       "contentHash": "396031251978f8febfd90cb62cb240ec",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -1637,12 +1637,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "Strings": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Strings.sol/Strings.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Strings.sol/Strings.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1669960941359,
+      "lastModificationDate": 1670010506414,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -1679,12 +1679,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "ERC165": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ERC165.sol/ERC165.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ERC165.sol/ERC165.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1669960941361,
+      "lastModificationDate": 1670010506415,
       "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
@@ -1719,12 +1719,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IERC165": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IERC165.sol/IERC165.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IERC165.sol/IERC165.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/introspection/IERC1820Registry.sol": {
-      "lastModificationDate": 1669960941362,
+      "lastModificationDate": 1670010506415,
       "contentHash": "2d32789d582abdcbe87cc5edc2e07374",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/introspection/IERC1820Registry.sol",
       "solcConfig": {
@@ -1759,12 +1759,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IERC1820Registry": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IERC1820Registry.sol/IERC1820Registry.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IERC1820Registry.sol/IERC1820Registry.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/math/Math.sol": {
-      "lastModificationDate": 1669960946755,
+      "lastModificationDate": 1670010506415,
       "contentHash": "b9c58920ce74d6dc819161786112e7ee",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
       "solcConfig": {
@@ -1799,12 +1799,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "Math": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Math.sol/Math.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Math.sol/Math.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol": {
-      "lastModificationDate": 1669960941364,
+      "lastModificationDate": 1670010506415,
       "contentHash": "67cf2dfe1d1c22b4ea7f242e8a17f431",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol",
       "solcConfig": {
@@ -1839,12 +1839,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "SafeCast": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SafeCast.sol/SafeCast.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SafeCast.sol/SafeCast.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol": {
-      "lastModificationDate": 1669960941365,
+      "lastModificationDate": 1670010506415,
       "contentHash": "2337f0279507b5edf14a07067adf0d05",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol",
       "solcConfig": {
@@ -1879,12 +1879,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "SafeMath": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SafeMath.sol/SafeMath.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SafeMath.sol/SafeMath.json"
         }
       }
     },
     "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol": {
-      "lastModificationDate": 1669960941368,
+      "lastModificationDate": 1670010506416,
       "contentHash": "6116ca703456923afc88ce24b466ac80",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol",
       "solcConfig": {
@@ -1919,12 +1919,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "EnumerableSet": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "EnumerableSet.sol/EnumerableSet.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "EnumerableSet.sol/EnumerableSet.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/agreements/AgreementBase.sol": {
-      "lastModificationDate": 1669952763769,
+      "lastModificationDate": 1670010509678,
       "contentHash": "dc80ed7d31c9daede43434a4becaed96",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/agreements/AgreementBase.sol",
       "solcConfig": {
@@ -1966,12 +1966,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "AgreementBase": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "AgreementBase.sol/AgreementBase.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "AgreementBase.sol/AgreementBase.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/agreements/AgreementLibrary.sol": {
-      "lastModificationDate": 1669952763770,
+      "lastModificationDate": 1670010509678,
       "contentHash": "02df1fa3a993351aaccb55d03faf34bd",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/agreements/AgreementLibrary.sol",
       "solcConfig": {
@@ -2020,12 +2020,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "AgreementLibrary": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "AgreementLibrary.sol/AgreementLibrary.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "AgreementLibrary.sol/AgreementLibrary.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/agreements/ConstantFlowAgreementV1.sol": {
-      "lastModificationDate": 1669952763771,
+      "lastModificationDate": 1670010509678,
       "contentHash": "5f38f592807839ef889e96fe553cbe0d",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/agreements/ConstantFlowAgreementV1.sol",
       "solcConfig": {
@@ -2082,12 +2082,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "ConstantFlowAgreementV1": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ConstantFlowAgreementV1.sol/ConstantFlowAgreementV1.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ConstantFlowAgreementV1.sol/ConstantFlowAgreementV1.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/agreements/InstantDistributionAgreementV1.sol": {
-      "lastModificationDate": 1669952763772,
+      "lastModificationDate": 1670010509678,
       "contentHash": "42c25ed35dccf1ed5f8cf57aea5572a7",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/agreements/InstantDistributionAgreementV1.sol",
       "solcConfig": {
@@ -2144,12 +2144,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "InstantDistributionAgreementV1": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "InstantDistributionAgreementV1.sol/InstantDistributionAgreementV1.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "InstantDistributionAgreementV1.sol/InstantDistributionAgreementV1.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/apps/CFAv1Library.sol": {
-      "lastModificationDate": 1669952763773,
+      "lastModificationDate": 1670010509678,
       "contentHash": "7f1c3c2756f57803911d753f3f4591c4",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/apps/CFAv1Library.sol",
       "solcConfig": {
@@ -2198,12 +2198,12 @@
       "versionRequirement": null,
       "artifacts": {
         "CFAv1Library": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "CFAv1Library.sol/CFAv1Library.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "CFAv1Library.sol/CFAv1Library.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/apps/IDAv1Library.sol": {
-      "lastModificationDate": 1669952763774,
+      "lastModificationDate": 1670010509679,
       "contentHash": "ac620fa3113afdb0a84b62b5b28a8e26",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/apps/IDAv1Library.sol",
       "solcConfig": {
@@ -2252,12 +2252,12 @@
       "versionRequirement": null,
       "artifacts": {
         "IDAv1Library": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IDAv1Library.sol/IDAv1Library.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IDAv1Library.sol/IDAv1Library.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/apps/SuperAppBase.sol": {
-      "lastModificationDate": 1669952763775,
+      "lastModificationDate": 1670010509679,
       "contentHash": "4ad2109d5a8003eca4b9a792c863bc87",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/apps/SuperAppBase.sol",
       "solcConfig": {
@@ -2305,12 +2305,12 @@
       "versionRequirement": null,
       "artifacts": {
         "SuperAppBase": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperAppBase.sol/SuperAppBase.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperAppBase.sol/SuperAppBase.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/gov/SuperfluidGovernanceBase.sol": {
-      "lastModificationDate": 1669952763776,
+      "lastModificationDate": 1670010509679,
       "contentHash": "74a5316f9dbb8095d0374c89f6060b55",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/gov/SuperfluidGovernanceBase.sol",
       "solcConfig": {
@@ -2362,12 +2362,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "SuperfluidGovernanceBase": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperfluidGovernanceBase.sol/SuperfluidGovernanceBase.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperfluidGovernanceBase.sol/SuperfluidGovernanceBase.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementHook.sol": {
-      "lastModificationDate": 1669952763778,
+      "lastModificationDate": 1670010509679,
       "contentHash": "2a774b18bf7379d6d96bb03ef2cee9ea",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementHook.sol",
       "solcConfig": {
@@ -2405,12 +2405,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IConstantFlowAgreementHook": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IConstantFlowAgreementHook.sol/IConstantFlowAgreementHook.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IConstantFlowAgreementHook.sol/IConstantFlowAgreementHook.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol": {
-      "lastModificationDate": 1669952763780,
+      "lastModificationDate": 1670010509679,
       "contentHash": "cea469dcdeaa6e0992d7beea10698a81",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol",
       "solcConfig": {
@@ -2448,12 +2448,12 @@
       "versionRequirement": null,
       "artifacts": {
         "IConstantFlowAgreementV1": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IConstantFlowAgreementV1.sol/IConstantFlowAgreementV1.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IConstantFlowAgreementV1.sol/IConstantFlowAgreementV1.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IInstantDistributionAgreementV1.sol": {
-      "lastModificationDate": 1669952763781,
+      "lastModificationDate": 1670010509679,
       "contentHash": "60042f78e0fa54a8547790c391ab27c1",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IInstantDistributionAgreementV1.sol",
       "solcConfig": {
@@ -2491,12 +2491,12 @@
       "versionRequirement": null,
       "artifacts": {
         "IInstantDistributionAgreementV1": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IInstantDistributionAgreementV1.sol/IInstantDistributionAgreementV1.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IInstantDistributionAgreementV1.sol/IInstantDistributionAgreementV1.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/CustomSuperTokenBase.sol": {
-      "lastModificationDate": 1669952763783,
+      "lastModificationDate": 1670010509680,
       "contentHash": "702cc91c30c8686580eda5a7e66894d5",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/CustomSuperTokenBase.sol",
       "solcConfig": {
@@ -2544,12 +2544,12 @@
       "versionRequirement": null,
       "artifacts": {
         "CustomSuperTokenBase": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "CustomSuperTokenBase.sol/CustomSuperTokenBase.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "CustomSuperTokenBase.sol/CustomSuperTokenBase.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol": {
-      "lastModificationDate": 1669952763784,
+      "lastModificationDate": 1670010509680,
       "contentHash": "0a62a33752eb885902d5abddae820f4f",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol",
       "solcConfig": {
@@ -2584,24 +2584,24 @@
       "versionRequirement": null,
       "artifacts": {
         "BatchOperation": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Definitions.sol/BatchOperation.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Definitions.sol/BatchOperation.json"
         },
         "ContextDefinitions": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Definitions.sol/ContextDefinitions.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Definitions.sol/ContextDefinitions.json"
         },
         "FlowOperatorDefinitions": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Definitions.sol/FlowOperatorDefinitions.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Definitions.sol/FlowOperatorDefinitions.json"
         },
         "SuperAppDefinitions": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Definitions.sol/SuperAppDefinitions.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Definitions.sol/SuperAppDefinitions.json"
         },
         "SuperfluidGovernanceConfigs": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Definitions.sol/SuperfluidGovernanceConfigs.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Definitions.sol/SuperfluidGovernanceConfigs.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperAgreement.sol": {
-      "lastModificationDate": 1669952763785,
+      "lastModificationDate": 1670010509680,
       "contentHash": "49d978f06d4edeb5125a7152d6897e69",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperAgreement.sol",
       "solcConfig": {
@@ -2639,12 +2639,12 @@
       "versionRequirement": null,
       "artifacts": {
         "ISuperAgreement": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ISuperAgreement.sol/ISuperAgreement.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ISuperAgreement.sol/ISuperAgreement.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperApp.sol": {
-      "lastModificationDate": 1669952763786,
+      "lastModificationDate": 1670010509680,
       "contentHash": "3b1a28352fc3ab7b2659bc3ab3c7bb92",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperApp.sol",
       "solcConfig": {
@@ -2692,12 +2692,12 @@
       "versionRequirement": null,
       "artifacts": {
         "ISuperApp": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ISuperApp.sol/ISuperApp.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ISuperApp.sol/ISuperApp.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol": {
-      "lastModificationDate": 1669952763787,
+      "lastModificationDate": 1670010509680,
       "contentHash": "c997873215bc40c871c2cb181282b530",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol",
       "solcConfig": {
@@ -2745,12 +2745,12 @@
       "versionRequirement": null,
       "artifacts": {
         "ISuperToken": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ISuperToken.sol/ISuperToken.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ISuperToken.sol/ISuperToken.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperTokenFactory.sol": {
-      "lastModificationDate": 1669952763788,
+      "lastModificationDate": 1670010509680,
       "contentHash": "696c26b081a411e4cf4ca86e40f85da8",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperTokenFactory.sol",
       "solcConfig": {
@@ -2798,12 +2798,12 @@
       "versionRequirement": null,
       "artifacts": {
         "ISuperTokenFactory": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ISuperTokenFactory.sol/ISuperTokenFactory.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ISuperTokenFactory.sol/ISuperTokenFactory.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol": {
-      "lastModificationDate": 1669952763789,
+      "lastModificationDate": 1670010509680,
       "contentHash": "923d8bee2334395f7ad909b8e98e07e9",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol",
       "solcConfig": {
@@ -2851,12 +2851,12 @@
       "versionRequirement": null,
       "artifacts": {
         "ISuperfluid": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ISuperfluid.sol/ISuperfluid.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ISuperfluid.sol/ISuperfluid.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidGovernance.sol": {
-      "lastModificationDate": 1669952763789,
+      "lastModificationDate": 1670010509680,
       "contentHash": "f39a1c0568c38958f3c5c80b6fb1603c",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidGovernance.sol",
       "solcConfig": {
@@ -2904,12 +2904,12 @@
       "versionRequirement": null,
       "artifacts": {
         "ISuperfluidGovernance": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ISuperfluidGovernance.sol/ISuperfluidGovernance.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ISuperfluidGovernance.sol/ISuperfluidGovernance.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol": {
-      "lastModificationDate": 1669952763790,
+      "lastModificationDate": 1670010509680,
       "contentHash": "095cd6cdf7df13a739649f8917862cb0",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol",
       "solcConfig": {
@@ -2947,12 +2947,12 @@
       "versionRequirement": null,
       "artifacts": {
         "ISuperfluidToken": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ISuperfluidToken.sol/ISuperfluidToken.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ISuperfluidToken.sol/ISuperfluidToken.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ERC20WithTokenInfo.sol": {
-      "lastModificationDate": 1669952763791,
+      "lastModificationDate": 1670010509681,
       "contentHash": "77968d7579793b9f87e33dec4d917f44",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ERC20WithTokenInfo.sol",
       "solcConfig": {
@@ -2990,12 +2990,12 @@
       "versionRequirement": null,
       "artifacts": {
         "ERC20WithTokenInfo": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ERC20WithTokenInfo.sol/ERC20WithTokenInfo.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ERC20WithTokenInfo.sol/ERC20WithTokenInfo.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/IPureSuperToken.sol": {
-      "lastModificationDate": 1669952763791,
+      "lastModificationDate": 1670010509681,
       "contentHash": "f6d2a176133259c159452720113499e7",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/IPureSuperToken.sol",
       "solcConfig": {
@@ -3043,15 +3043,15 @@
       "versionRequirement": null,
       "artifacts": {
         "IPureSuperToken": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IPureSuperToken.sol/IPureSuperToken.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IPureSuperToken.sol/IPureSuperToken.json"
         },
         "IPureSuperTokenCustom": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IPureSuperToken.sol/IPureSuperTokenCustom.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IPureSuperToken.sol/IPureSuperTokenCustom.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ISETH.sol": {
-      "lastModificationDate": 1669952763792,
+      "lastModificationDate": 1670010509681,
       "contentHash": "726dc2a8154819f5dbf3820c1cd835b9",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ISETH.sol",
       "solcConfig": {
@@ -3099,15 +3099,15 @@
       "versionRequirement": null,
       "artifacts": {
         "ISETH": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ISETH.sol/ISETH.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ISETH.sol/ISETH.json"
         },
         "ISETHCustom": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ISETH.sol/ISETHCustom.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ISETH.sol/ISETHCustom.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/TokenInfo.sol": {
-      "lastModificationDate": 1669952763792,
+      "lastModificationDate": 1670010509681,
       "contentHash": "6326411b7eb3d451fdffd149d821a7cb",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/TokenInfo.sol",
       "solcConfig": {
@@ -3142,12 +3142,12 @@
       "versionRequirement": null,
       "artifacts": {
         "TokenInfo": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "TokenInfo.sol/TokenInfo.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "TokenInfo.sol/TokenInfo.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/utils/IRelayRecipient.sol": {
-      "lastModificationDate": 1669952763795,
+      "lastModificationDate": 1670010509681,
       "contentHash": "e6bbdf34e893e434a94bdb3cde1a7fde",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/utils/IRelayRecipient.sol",
       "solcConfig": {
@@ -3182,12 +3182,12 @@
       "versionRequirement": null,
       "artifacts": {
         "IRelayRecipient": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IRelayRecipient.sol/IRelayRecipient.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IRelayRecipient.sol/IRelayRecipient.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/utils/IResolver.sol": {
-      "lastModificationDate": 1669952763796,
+      "lastModificationDate": 1670010509681,
       "contentHash": "78ec22d41ce67b56ddb31b6d6e908a34",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/utils/IResolver.sol",
       "solcConfig": {
@@ -3222,12 +3222,12 @@
       "versionRequirement": null,
       "artifacts": {
         "IResolver": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IResolver.sol/IResolver.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IResolver.sol/IResolver.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/BaseRelayRecipient.sol": {
-      "lastModificationDate": 1669952763797,
+      "lastModificationDate": 1670010509681,
       "contentHash": "604a1a19692cb179a951c9c176bd6132",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/BaseRelayRecipient.sol",
       "solcConfig": {
@@ -3264,12 +3264,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "BaseRelayRecipient": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "BaseRelayRecipient.sol/BaseRelayRecipient.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "BaseRelayRecipient.sol/BaseRelayRecipient.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/CallUtils.sol": {
-      "lastModificationDate": 1669952763798,
+      "lastModificationDate": 1670010509681,
       "contentHash": "3a9b7a8811ba0f228e52ef932ed799ae",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/CallUtils.sol",
       "solcConfig": {
@@ -3304,12 +3304,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "CallUtils": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "CallUtils.sol/CallUtils.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "CallUtils.sol/CallUtils.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/ERC1820RegistryCompiled.sol": {
-      "lastModificationDate": 1669952763798,
+      "lastModificationDate": 1670010509681,
       "contentHash": "3f921d550df7d538db5acaee385243fb",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/ERC1820RegistryCompiled.sol",
       "solcConfig": {
@@ -3344,12 +3344,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "ERC1820RegistryCompiled": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ERC1820RegistryCompiled.sol/ERC1820RegistryCompiled.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ERC1820RegistryCompiled.sol/ERC1820RegistryCompiled.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/ERC777Helper.sol": {
-      "lastModificationDate": 1669952763799,
+      "lastModificationDate": 1670010509681,
       "contentHash": "4e90bc423492becc11fee3357398172e",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/ERC777Helper.sol",
       "solcConfig": {
@@ -3386,12 +3386,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "ERC777Helper": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ERC777Helper.sol/ERC777Helper.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ERC777Helper.sol/ERC777Helper.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/EventsEmitter.sol": {
-      "lastModificationDate": 1669952763800,
+      "lastModificationDate": 1670010509682,
       "contentHash": "81addb18e7bed9bf5b6240bff3cc2f15",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/EventsEmitter.sol",
       "solcConfig": {
@@ -3426,12 +3426,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "EventsEmitter": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "EventsEmitter.sol/EventsEmitter.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "EventsEmitter.sol/EventsEmitter.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/FixedSizeData.sol": {
-      "lastModificationDate": 1669952763801,
+      "lastModificationDate": 1670010509682,
       "contentHash": "0d578fc243fe6d78c7f524fb4cb5d43f",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/FixedSizeData.sol",
       "solcConfig": {
@@ -3466,12 +3466,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "FixedSizeData": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "FixedSizeData.sol/FixedSizeData.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "FixedSizeData.sol/FixedSizeData.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/SlotsBitmapLibrary.sol": {
-      "lastModificationDate": 1669952763801,
+      "lastModificationDate": 1670010509682,
       "contentHash": "9c05a78908a15d63bc80de5fb7e4ef13",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/libs/SlotsBitmapLibrary.sol",
       "solcConfig": {
@@ -3509,12 +3509,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "SlotsBitmapLibrary": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SlotsBitmapLibrary.sol/SlotsBitmapLibrary.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SlotsBitmapLibrary.sol/SlotsBitmapLibrary.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/FullUpgradableSuperTokenProxy.sol": {
-      "lastModificationDate": 1669952763821,
+      "lastModificationDate": 1670010509684,
       "contentHash": "fb564f254f4bc37e3d63fefec5fd1300",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/FullUpgradableSuperTokenProxy.sol",
       "solcConfig": {
@@ -3563,12 +3563,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "FullUpgradableSuperTokenProxy": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "FullUpgradableSuperTokenProxy.sol/FullUpgradableSuperTokenProxy.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "FullUpgradableSuperTokenProxy.sol/FullUpgradableSuperTokenProxy.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/SuperToken.sol": {
-      "lastModificationDate": 1669952763822,
+      "lastModificationDate": 1670010509684,
       "contentHash": "0ffc66313d9dca4335404a894858ea95",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/SuperToken.sol",
       "solcConfig": {
@@ -3631,12 +3631,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "SuperToken": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperToken.sol/SuperToken.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperToken.sol/SuperToken.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/SuperTokenFactory.sol": {
-      "lastModificationDate": 1669952763823,
+      "lastModificationDate": 1670010509684,
       "contentHash": "5ec71a46466bc9e065ade3ad23a25bd0",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/SuperTokenFactory.sol",
       "solcConfig": {
@@ -3705,18 +3705,18 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "SuperTokenFactory": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperTokenFactory.sol/SuperTokenFactory.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperTokenFactory.sol/SuperTokenFactory.json"
         },
         "SuperTokenFactoryBase": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperTokenFactory.sol/SuperTokenFactoryBase.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperTokenFactory.sol/SuperTokenFactoryBase.json"
         },
         "SuperTokenFactoryHelper": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperTokenFactory.sol/SuperTokenFactoryHelper.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperTokenFactory.sol/SuperTokenFactoryHelper.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/Superfluid.sol": {
-      "lastModificationDate": 1669952763824,
+      "lastModificationDate": 1670010509684,
       "contentHash": "9db8275a93e65404895fbf5779df3f40",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/Superfluid.sol",
       "solcConfig": {
@@ -3774,12 +3774,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "Superfluid": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Superfluid.sol/Superfluid.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Superfluid.sol/Superfluid.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/SuperfluidToken.sol": {
-      "lastModificationDate": 1669952763825,
+      "lastModificationDate": 1670010509684,
       "contentHash": "a016e3ef00cb1e2e76617242397a6e8a",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/superfluid/SuperfluidToken.sol",
       "solcConfig": {
@@ -3830,12 +3830,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "SuperfluidToken": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperfluidToken.sol/SuperfluidToken.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperfluidToken.sol/SuperfluidToken.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/tokens/PureSuperToken.sol": {
-      "lastModificationDate": 1669952763826,
+      "lastModificationDate": 1670010509684,
       "contentHash": "2817c1301c2a392cd96590aac184589a",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/tokens/PureSuperToken.sol",
       "solcConfig": {
@@ -3888,12 +3888,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "PureSuperToken": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "PureSuperToken.sol/PureSuperToken.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "tokens/PureSuperToken.sol/PureSuperToken.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/tokens/SETH.sol": {
-      "lastModificationDate": 1669952763827,
+      "lastModificationDate": 1670010509685,
       "contentHash": "f2c55e9a955f49e652152ad6ffa60f09",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/tokens/SETH.sol",
       "solcConfig": {
@@ -3946,12 +3946,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "SETHProxy": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SETH.sol/SETHProxy.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SETH.sol/SETHProxy.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/upgradability/UUPSProxiable.sol": {
-      "lastModificationDate": 1669952763828,
+      "lastModificationDate": 1670010509685,
       "contentHash": "ba600ac351daf797312ce1b57b4bfa52",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/upgradability/UUPSProxiable.sol",
       "solcConfig": {
@@ -3990,12 +3990,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "UUPSProxiable": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "UUPSProxiable.sol/UUPSProxiable.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "UUPSProxiable.sol/UUPSProxiable.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/upgradability/UUPSProxy.sol": {
-      "lastModificationDate": 1669952763829,
+      "lastModificationDate": 1670010509685,
       "contentHash": "ca5bf75f505eddbcd3e2f7ee9f4b8625",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/upgradability/UUPSProxy.sol",
       "solcConfig": {
@@ -4033,12 +4033,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "UUPSProxy": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "UUPSProxy.sol/UUPSProxy.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "upgradability/UUPSProxy.sol/UUPSProxy.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/upgradability/UUPSUtils.sol": {
-      "lastModificationDate": 1669952763830,
+      "lastModificationDate": 1670010509685,
       "contentHash": "6d19c49baab60556bee9564fae70c64e",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/upgradability/UUPSUtils.sol",
       "solcConfig": {
@@ -4073,12 +4073,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "UUPSUtils": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "UUPSUtils.sol/UUPSUtils.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "UUPSUtils.sol/UUPSUtils.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/CFAv1Forwarder.sol": {
-      "lastModificationDate": 1669952763832,
+      "lastModificationDate": 1670010509685,
       "contentHash": "81a5d1c9e2c241c40f7838c5ce91135f",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/CFAv1Forwarder.sol",
       "solcConfig": {
@@ -4128,12 +4128,12 @@
       "versionRequirement": null,
       "artifacts": {
         "CFAv1Forwarder": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "CFAv1Forwarder.sol/CFAv1Forwarder.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "CFAv1Forwarder.sol/CFAv1Forwarder.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/Resolver.sol": {
-      "lastModificationDate": 1669952763833,
+      "lastModificationDate": 1670010509685,
       "contentHash": "aeaf88f78d914f12d9b6cbdccd730aa9",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/Resolver.sol",
       "solcConfig": {
@@ -4180,12 +4180,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "Resolver": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Resolver.sol/Resolver.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Resolver.sol/Resolver.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/SuperfluidFrameworkDeployer.sol": {
-      "lastModificationDate": 1669952763834,
+      "lastModificationDate": 1670010509685,
       "contentHash": "5b553007502518e30d37ae6106c04f14",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/SuperfluidFrameworkDeployer.sol",
       "solcConfig": {
@@ -4293,12 +4293,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "SuperfluidFrameworkDeployer": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperfluidFrameworkDeployer.sol/SuperfluidFrameworkDeployer.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperfluidFrameworkDeployer.sol/SuperfluidFrameworkDeployer.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/SuperfluidLoader.sol": {
-      "lastModificationDate": 1669952763835,
+      "lastModificationDate": 1670010509685,
       "contentHash": "962d0b13616a120fbe65cc8471c51069",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/SuperfluidLoader.sol",
       "solcConfig": {
@@ -4347,12 +4347,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "SuperfluidLoader": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "SuperfluidLoader.sol/SuperfluidLoader.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SuperfluidLoader.sol/SuperfluidLoader.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/TestGovernance.sol": {
-      "lastModificationDate": 1669952763837,
+      "lastModificationDate": 1670010509686,
       "contentHash": "b8debf3ce067b25c0b116ced1e596f27",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/TestGovernance.sol",
       "solcConfig": {
@@ -4407,12 +4407,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "TestGovernance": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "TestGovernance.sol/TestGovernance.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "TestGovernance.sol/TestGovernance.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/TestResolver.sol": {
-      "lastModificationDate": 1669952763837,
+      "lastModificationDate": 1670010509686,
       "contentHash": "2e531e74821a4e58d343d87f329ddfd9",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/TestResolver.sol",
       "solcConfig": {
@@ -4460,12 +4460,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "TestResolver": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "TestResolver.sol/TestResolver.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "TestResolver.sol/TestResolver.json"
         }
       }
     },
     "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/TestToken.sol": {
-      "lastModificationDate": 1669952763838,
+      "lastModificationDate": 1670010509686,
       "contentHash": "d8d07cd5229799e4abd5a42d1aa8b742",
       "sourceName": "lib/protocol-monorepo/packages/ethereum-contracts/contracts/utils/TestToken.sol",
       "solcConfig": {
@@ -4505,12 +4505,12 @@
       "versionRequirement": "=0.8.16",
       "artifacts": {
         "TestToken": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "TestToken.sol/TestToken.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "TestToken.sol/TestToken.json"
         }
       }
     },
     "lib/solmate/src/tokens/ERC721.sol": {
-      "lastModificationDate": 1669983350867,
+      "lastModificationDate": 1670010514127,
       "contentHash": "ecc06cefc5404b9e1adbc2e459d5757e",
       "sourceName": "lib/solmate/src/tokens/ERC721.sol",
       "solcConfig": {
@@ -4545,15 +4545,15 @@
       "versionRequirement": ">=0.8.0",
       "artifacts": {
         "ERC721": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ERC721.sol/ERC721.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ERC721.sol/ERC721.json"
         },
         "ERC721TokenReceiver": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "ERC721.sol/ERC721TokenReceiver.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "ERC721.sol/ERC721TokenReceiver.json"
         }
       }
     },
     "script/Counter.s.sol": {
-      "lastModificationDate": 1669952010282,
+      "lastModificationDate": 1669982893579,
       "contentHash": "0705c52104730a78aef4aa6694175c81",
       "sourceName": "script/Counter.s.sol",
       "solcConfig": {
@@ -4603,12 +4603,69 @@
       "versionRequirement": "^0.8.13",
       "artifacts": {
         "CounterScript": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "Counter.s.sol/CounterScript.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Counter.s.sol/CounterScript.json"
+        }
+      }
+    },
+    "src/SocialToken.sol": {
+      "lastModificationDate": 1670017001368,
+      "contentHash": "f51f24ddfe4a91147c04c014c938beff",
+      "sourceName": "src/SocialToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/custom-supertokens/contracts/base/SuperTokenBase.sol",
+        "lib/custom-supertokens/contracts/base/SuperTokenStorage.sol",
+        "lib/custom-supertokens/contracts/base/UUPSProxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperAgreement.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperApp.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperTokenFactory.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidGovernance.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ERC20WithTokenInfo.sol",
+        "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/TokenInfo.sol"
+      ],
+      "versionRequirement": "^0.8.15",
+      "artifacts": {
+        "PureSuperToken": {
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "SocialToken.sol/PureSuperToken.json"
         }
       }
     },
     "src/StreamManager.sol": {
-      "lastModificationDate": 1670016298552,
+      "lastModificationDate": 1670016529785,
       "contentHash": "0de09a6475516b3c0db7847ca9bb02c6",
       "sourceName": "src/StreamManager.sol",
       "solcConfig": {
@@ -4669,12 +4726,12 @@
       "versionRequirement": "^0.8.15",
       "artifacts": {
         "StreamManager": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "StreamManager.sol/StreamManager.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "StreamManager.sol/StreamManager.json"
         }
       }
     },
     "src/interfaces/IERC721Mod.sol": {
-      "lastModificationDate": 1669986565469,
+      "lastModificationDate": 1670010086491,
       "contentHash": "148936911c60e88a52f9d810d171cef8",
       "sourceName": "src/interfaces/IERC721Mod.sol",
       "solcConfig": {
@@ -4709,12 +4766,12 @@
       "versionRequirement": "^0.8.15",
       "artifacts": {
         "IERC721Mod": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IERC721Mod.sol/IERC721Mod.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IERC721Mod.sol/IERC721Mod.json"
         }
       }
     },
     "src/interfaces/IStreamManager.sol": {
-      "lastModificationDate": 1670016238137,
+      "lastModificationDate": 1670016529785,
       "contentHash": "426c3cb752841922d446d7f732eea4d5",
       "sourceName": "src/interfaces/IStreamManager.sol",
       "solcConfig": {
@@ -4764,12 +4821,12 @@
       "versionRequirement": "^0.8.15",
       "artifacts": {
         "IStreamManager": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IStreamManager.sol/IStreamManager.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IStreamManager.sol/IStreamManager.json"
         }
       }
     },
     "src/interfaces/IcfaV1Forwarder.sol": {
-      "lastModificationDate": 1669985992833,
+      "lastModificationDate": 1670010086491,
       "contentHash": "52a8164fba338dddc0472d75d3c78f3f",
       "sourceName": "src/interfaces/IcfaV1Forwarder.sol",
       "solcConfig": {
@@ -4818,12 +4875,12 @@
       "versionRequirement": "^0.8.15",
       "artifacts": {
         "IcfaV1Forwarder": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "IcfaV1Forwarder.sol/IcfaV1Forwarder.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "IcfaV1Forwarder.sol/IcfaV1Forwarder.json"
         }
       }
     },
     "test/helpers/FoundrySuperfluidTester.sol": {
-      "lastModificationDate": 1669961759653,
+      "lastModificationDate": 1669982893580,
       "contentHash": "00ebc5e0baa8152fb76ef1447777b655",
       "sourceName": "test/helpers/FoundrySuperfluidTester.sol",
       "solcConfig": {
@@ -4947,12 +5004,12 @@
       "versionRequirement": "^0.8.15",
       "artifacts": {
         "FoundrySuperfluidTester": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "FoundrySuperfluidTester.sol/FoundrySuperfluidTester.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "FoundrySuperfluidTester.sol/FoundrySuperfluidTester.json"
         }
       }
     },
     "test/mocks/MockNFT.sol": {
-      "lastModificationDate": 1669961844773,
+      "lastModificationDate": 1669982893580,
       "contentHash": "d7eead08c8544a04395abd4316a774d2",
       "sourceName": "test/mocks/MockNFT.sol",
       "solcConfig": {
@@ -4991,7 +5048,7 @@
       "versionRequirement": "^0.8.15",
       "artifacts": {
         "MockNFT": {
-          "0.8.16+commit.07a7930e.Linux.gcc": "MockNFT.sol/MockNFT.json"
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "MockNFT.sol/MockNFT.json"
         }
       }
     }
