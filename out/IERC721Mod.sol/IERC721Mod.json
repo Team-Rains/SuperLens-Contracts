@@ -1,0 +1,253 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "balanceOf(address)": "70a08231"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"balanceOf(address)\":{\"details\":\"Returns the number of tokens in ``owner``'s account.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/IERC721Mod.sol\":\"IERC721Mod\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@superfluid-finance/=lib/protocol-monorepo/packages/\",\":core/=lib/core/contracts/\",\":custom-supertokens/=lib/custom-supertokens/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":protocol-monorepo/=lib/protocol-monorepo/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/interfaces/IERC721Mod.sol\":{\"keccak256\":\"0x9437519f23aff527ee26da42889421d8c92d20c5cdcd0bc4fb97ca09a4cae3fd\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://d148c2246657c4ae0d2148076f55d565d78568a344eebd06b5b66febb48d3a0c\",\"dweb:/ipfs/QmV2KqRnnVu9Ua8y7iTTcLYFSeRV4yESZee65KiWjCvwYh\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.16+commit.07a7930e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "balance",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "balanceOf(address)": {
+            "details": "Returns the number of tokens in ``owner``'s account."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":@superfluid-finance/=lib/protocol-monorepo/packages/",
+        ":core/=lib/core/contracts/",
+        ":custom-supertokens/=lib/custom-supertokens/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        ":protocol-monorepo/=lib/protocol-monorepo/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/IERC721Mod.sol": "IERC721Mod"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/IERC721Mod.sol": {
+        "keccak256": "0x9437519f23aff527ee26da42889421d8c92d20c5cdcd0bc4fb97ca09a4cae3fd",
+        "urls": [
+          "bzz-raw://d148c2246657c4ae0d2148076f55d565d78568a344eebd06b5b66febb48d3a0c",
+          "dweb:/ipfs/QmV2KqRnnVu9Ua8y7iTTcLYFSeRV4yESZee65KiWjCvwYh"
+        ],
+        "license": "SEE LICENSE IN LICENSE"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IERC721Mod.sol",
+    "id": 12066,
+    "exportedSymbols": {
+      "IERC721Mod": [
+        12065
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "51:210:23",
+    "nodes": [
+      {
+        "id": 12056,
+        "nodeType": "PragmaDirective",
+        "src": "51:24:23",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ]
+      },
+      {
+        "id": 12065,
+        "nodeType": "ContractDefinition",
+        "src": "77:184:23",
+        "nodes": [
+          {
+            "id": 12064,
+            "nodeType": "FunctionDefinition",
+            "src": "185:74:23",
+            "nodes": [],
+            "documentation": {
+              "id": 12057,
+              "nodeType": "StructuredDocumentation",
+              "src": "104:76:23",
+              "text": " @dev Returns the number of tokens in ``owner``'s account."
+            },
+            "functionSelector": "70a08231",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nameLocation": "194:9:23",
+            "parameters": {
+              "id": 12060,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12059,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "212:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12064,
+                  "src": "204:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12058,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "204:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "203:15:23"
+            },
+            "returnParameters": {
+              "id": 12063,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12062,
+                  "mutability": "mutable",
+                  "name": "balance",
+                  "nameLocation": "250:7:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12064,
+                  "src": "242:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12061,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "242:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "241:17:23"
+            },
+            "scope": 12065,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC721Mod",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          12065
+        ],
+        "name": "IERC721Mod",
+        "nameLocation": "87:10:23",
+        "scope": 12066,
+        "usedErrors": []
+      }
+    ],
+    "license": "SEE LICENSE IN LICENSE"
+  },
+  "id": 23
+}

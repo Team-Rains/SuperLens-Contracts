@@ -6,3 +6,4 @@ protocol-monorepo/=lib/protocol-monorepo/
 solmate/=lib/solmate/src/
 openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/
 @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+@superfluid-finance/=lib/protocol-monorepo/packages/

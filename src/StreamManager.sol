@@ -11,7 +11,12 @@ import "forge-std/console.sol";
 
 // TODO: Add `Ownable`.
 // TODO: [Optional] multi tier system.
-contract StreamManager is IERC721Mod, SuperAppBase, Initializable {
+contract StreamManager is
+    IStreamManager,
+    IERC721Mod,
+    SuperAppBase,
+    Initializable
+{
     address CREATOR;
 
     // TODO: Change this to `IStakingContract`.
@@ -25,16 +30,16 @@ contract StreamManager is IERC721Mod, SuperAppBase, Initializable {
 
     address HOST;
 
-    int96 paymentFlowRate;
+    int96 paymentFlowrate;
 
     function initialize(
         address _creator,
         address _paymentToken,
-        address _socialToken,
+        address payable _socialToken,
         address _stakingContract,
         address _forwarder,
         address _host,
-        int96 _paymentFlowRate
+        int96 _paymentFlowrate
     ) external initializer {
         if (
             _socialToken == address(0) ||
@@ -42,66 +47,58 @@ contract StreamManager is IERC721Mod, SuperAppBase, Initializable {
             _creator == address(0)
         ) revert ZeroAddress();
 
-        FORWARDER = _forwarder;
+        FORWARDER = IcfaV1Forwarder(_forwarder);
         SOCIAL_TOKEN = PureSuperToken(_socialToken);
-        PAYMENT_TOKEN = ISuperToken(paymentToken);
+        PAYMENT_TOKEN = ISuperToken(_paymentToken);
         STAKING_CONTRACT = _stakingContract;
         HOST = _host;
         CREATOR = _creator;
+        paymentFlowrate = _paymentFlowrate;
     }
 
     function balanceOf(address _subscriber)
         public
+        view
         returns (uint256 _isSubscribed)
     {
         // This is akin to a boolean check. We are checking whether a subscriber is streaming
         // the minimum acceptable amount of payment token to the creator.
-        _isSubscribed = (
-            FORWARDER.getFlowrate(
-                SOCIAL_TOKEN,
-                _subscriber,
-                address(this) >= paymentFlowRate
-            )
-        )
+        _isSubscribed = (FORWARDER.getFlowrate(
+            PAYMENT_TOKEN,
+            _subscriber,
+            address(this)
+        ) >= paymentFlowrate)
             ? 1
             : 0;
     }
 
     function afterAgreementCreated(
         ISuperToken _superToken,
-        address _agreementClass,
-        bytes32 _agreementId,
+        address /*_agreementClass*/,
+        bytes32 /*_agreementId*/,
         bytes calldata _agreementData,
-        bytes calldata _cbdata,
+        bytes calldata /*_cbdata*/,
         bytes calldata _ctx
-    ) external view returns (bytes memory _ctx) {
+    ) external override returns (bytes memory _newCtx) {
         _newCtx = _ctx;
 
         address host = HOST;
         if (msg.sender != host) revert NotHost(host, msg.sender);
 
-        // - Check if the payment token is correct.
-        // - Check if the amount going to be streamed is correct.
-        // - Start a social token stream back to the subscriber.
-        // - Increase the flowrate to staking contract (10% of the original flowrate).
-        // - Increase the flowrate to creator (90% of original flowrate).
-
         ISuperToken paymentToken = PAYMENT_TOKEN;
         IcfaV1Forwarder forwarder = FORWARDER;
-        PureSuperToken socialToken = SOCIAL_TOKEN;
-        address stakingContract = STAKING_CONTRACT;
-        address creator = CREATOR;
-
         (address subscriber, ) = abi.decode(_agreementData, (address, address));
 
+        // Check if the payment token is correct.
         if (_superToken != paymentToken)
             revert WrongPaymentToken(
                 address(paymentToken),
                 address(_superToken)
             );
 
+        // Check if the amount going to be streamed is correct.
         int96 incomingFlowrate = forwarder.getFlowrate(
-            socialToken, // token
+            ISuperToken(address(SOCIAL_TOKEN)), // token
             subscriber, // sender
             address(this) // receiver
         );
@@ -109,29 +106,36 @@ contract StreamManager is IERC721Mod, SuperAppBase, Initializable {
         if (incomingFlowrate < paymentFlowrate)
             revert WrongAmount(paymentFlowrate, incomingFlowrate);
 
+        // Start a social token stream back to the subscriber.
         // TODO: Start a stream to subscriber of social tokens.
         // use `createFlowByOperator` in `IcfaV1Forwarder`.
 
         int96 stakingContractRate = forwarder.getFlowrate(
             paymentToken,
             address(this),
-            stakingContract
+            STAKING_CONTRACT
         );
         int96 creatorRate = forwarder.getFlowrate(
             paymentToken,
             address(this),
-            creator
+            CREATOR
         );
 
+        int96 stakingContractFlowrateDelta = incomingFlowrate / int96(10);
+        int96 creatorFlowrateDelta = incomingFlowrate - stakingContractFlowrateDelta;
+
+        // Increase the flowrate to staking contract (10% of the original flowrate).
         forwarder.setFlowrate(
             paymentToken,
-            stakingContract,
-            stakingContractRate + (incomingFlowrate / int96(10))
+            STAKING_CONTRACT,
+            stakingContractRate + stakingContractFlowrateDelta
         );
+
+        // Increase the flowrate to creator (90% of original flowrate).
         forwarder.setFlowrate(
             paymentToken,
-            creator,
-            creatorRate + ((incomingFlowrate * 9) / 10)
+            CREATOR,
+            creatorRate + creatorFlowrateDelta
         );
     }
 }

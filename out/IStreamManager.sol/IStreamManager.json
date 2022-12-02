@@ -1,0 +1,629 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "expectedHost",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "actualCaller",
+          "type": "address"
+        }
+      ],
+      "name": "NotHost",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int96",
+          "name": "expectedAmount",
+          "type": "int96"
+        },
+        {
+          "internalType": "int96",
+          "name": "actualAmount",
+          "type": "int96"
+        }
+      ],
+      "name": "WrongAmount",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "expectedToken",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "actualToken",
+          "type": "address"
+        }
+      ],
+      "name": "WrongPaymentToken",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroAddress",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"expectedHost\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"actualCaller\",\"type\":\"address\"}],\"name\":\"NotHost\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"int96\",\"name\":\"expectedAmount\",\"type\":\"int96\"},{\"internalType\":\"int96\",\"name\":\"actualAmount\",\"type\":\"int96\"}],\"name\":\"WrongAmount\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"expectedToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"actualToken\",\"type\":\"address\"}],\"name\":\"WrongPaymentToken\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroAddress\",\"type\":\"error\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/IStreamManager.sol\":\"IStreamManager\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@superfluid-finance/=lib/protocol-monorepo/packages/\",\":core/=lib/core/contracts/\",\":custom-supertokens/=lib/custom-supertokens/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":protocol-monorepo/=lib/protocol-monorepo/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"lib/openzeppelin-contracts/contracts/token/ERC777/IERC777.sol\":{\"keccak256\":\"0x385a7061f1436b079d44c140dee9387d5313e94874ff9ee877dc0085c981ac3d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1c3fe22bb0d9527356e11f267f9187134de4d4ed1ff77468b4d73e3238697b96\",\"dweb:/ipfs/Qmc8caJctgxbzXEpxRogQMR2bnBk5U67hA7kKbUEG2PUXV\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol\":{\"keccak256\":\"0xce0197c49f5bb56f1446398e20347aedb1f490b243db064ac35a9ace25a96139\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://eb6c046bc8cc225c3343cb38630489582a0d605b6a0998cda83e675a0c8be858\",\"dweb:/ipfs/QmdAfuH9q1kzf4KC4yAFWZxJ9sJ7PkTrH6BHRELaWVXopi\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol\":{\"keccak256\":\"0xa72d8fea72c6ce0d46007cfddeee507a8aae688cfa698e34767ac32ed629dfc7\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://f965779bd0855f0959c0a99bd4c0198eaf3546f9c87da81780e815e7f58ada2d\",\"dweb:/ipfs/QmTaAh15dVoBqjwsnQSHzewvKgDmoj2of3t9P4Uzcnvtie\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperAgreement.sol\":{\"keccak256\":\"0x9b4fab6dcac1337f78e04d67d8c2b48b1de8bd4bbf14b475840f9dbda7b8f21e\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://cc2f3629ad0cb46bd4f595880591ad6c9d75a82d920cb9355e462fbf8022c820\",\"dweb:/ipfs/QmXMovxK4qpWT4yffXxUVjkMNwxEfS6mtn39mLSmjaxEdW\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperApp.sol\":{\"keccak256\":\"0x6cc4b0724d977190c7441dfc3be6c6e48b43b555c3370af32ef5b6600f15f53f\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://3e89c944642772a42429f21a11017b57deb98a9198f8e4f8749f00aaee71299e\",\"dweb:/ipfs/QmaSv9GvqikcGHJ3tcwATDHSpQw6mfnHPDtcfqcZSS7LF6\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol\":{\"keccak256\":\"0x2ccec11f964b165f64e453192793991bf28e1054069b6f709a39849a8286aeb4\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://edbaf6db0b9c6803dcdb7c91a2ddbdba503a41ecc5cecf9c27a43643669bfff1\",\"dweb:/ipfs/QmYpf7XFKrnB2ZAPf8cDqfvZDfyoxMHA1x2FQSYzDFE3KZ\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperTokenFactory.sol\":{\"keccak256\":\"0x316aa6cd16167569d5ee47fb2e4673b1def2117c7ea56969290ab6aec97cd263\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://a5eb13acce613a227c2c2b3da2b88ad6361c9e541ca59ccee0bb5cf42cffccc6\",\"dweb:/ipfs/QmceA9RWHL1BWk4cPnYY55FjAdsEi1LfXrC11RbF8Wb8eW\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol\":{\"keccak256\":\"0xab9dab941f99d0f0ef6125fb6eafde03378d7c3e94e613dd12fb7fbf594c3373\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://928c6ef915dee69058d4cfcb9f2344d4fc78d9763b47b17e5c03fbff64ba3c64\",\"dweb:/ipfs/Qmdk733ZHceatz3qbuodLCCS9TUspJJtXLoX6vWwMvrPDE\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidGovernance.sol\":{\"keccak256\":\"0x90a9259d0f0bb6b1bb6d48f051277eb75df96a9fbe684a203a3a468ad19318e2\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://9c8162a2d07ffe768920fef55292684149173afefbfba76b8fca007e55092229\",\"dweb:/ipfs/QmducLNwrzeUXEpBjUTSMu7sfmQEwVhcYXApe4brc1zQ6V\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol\":{\"keccak256\":\"0x9cad3866982902ea88df0874a563d2e4aeba5a5bcc6289c30cccf9b4099d2fb6\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://e8fd960b259331f204c7cb7dcd32b09d68f4294e3b872fad00ad467609c3ef72\",\"dweb:/ipfs/QmeZFEvsDunXQGPbXFfN5AvfKM5am1FY8Xv6e3c4tNKvgY\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ERC20WithTokenInfo.sol\":{\"keccak256\":\"0x55be78ffb441c782f612b153d7d9049e3f0dbfd412c1f7df29c896b972b2985f\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://a223c68e38a6c9b1e363e525911bc7eda44ea517865ae53bd0d34ff858cc02ae\",\"dweb:/ipfs/QmVruGehibG6Emr2A6JHwUnhd4NzsGkE24cbGqnDpEvrKh\"]},\"lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/TokenInfo.sol\":{\"keccak256\":\"0x7456cd394cc905aae7cdbd4601ce1c296c768c13c28e66efbb913cc070bad3e4\",\"license\":\"AGPLv3\",\"urls\":[\"bzz-raw://5a6589b428b724721ba5b4dd196c8f366a6e694ef313add093f29af64496c042\",\"dweb:/ipfs/QmSMgV6y8L6pyyzDz6kKmafVwujNWcjTqutpCBxe4uNRqg\"]},\"src/interfaces/IStreamManager.sol\":{\"keccak256\":\"0xbd09bd13d1e50d72eafd2daafac0f838d3d9de8ee09bb6ba63d883265c6dbd39\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://cb3dc79d3b20c551fee80cfd82eb0898df154b5627f5476954f549b260242f6d\",\"dweb:/ipfs/QmZeB5hYhtdQa242HXitFyWHPVRNtmV222boQV2iZntSb3\"]},\"src/interfaces/IcfaV1Forwarder.sol\":{\"keccak256\":\"0x93e1acfd961d30da03d31d5cf0e6621f23f6d0f618c669a4dc9aa9d9f2778dd4\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://a92361a2eb3fa033f2a6193c9b68dcd07db9e0130a52c640db9b1b8cc8d409eb\",\"dweb:/ipfs/QmQDZS4t5tPrDXHznSG1PtuBp38vVFDM9W9cc4BSNr4N7i\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.16+commit.07a7930e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "expectedHost",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "actualCaller",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "NotHost"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "int96",
+              "name": "expectedAmount",
+              "type": "int96"
+            },
+            {
+              "internalType": "int96",
+              "name": "actualAmount",
+              "type": "int96"
+            }
+          ],
+          "type": "error",
+          "name": "WrongAmount"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "expectedToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "actualToken",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "WrongPaymentToken"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "ZeroAddress"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":@superfluid-finance/=lib/protocol-monorepo/packages/",
+        ":core/=lib/core/contracts/",
+        ":custom-supertokens/=lib/custom-supertokens/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        ":protocol-monorepo/=lib/protocol-monorepo/",
+        ":solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/IStreamManager.sol": "IStreamManager"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC777/IERC777.sol": {
+        "keccak256": "0x385a7061f1436b079d44c140dee9387d5313e94874ff9ee877dc0085c981ac3d",
+        "urls": [
+          "bzz-raw://1c3fe22bb0d9527356e11f267f9187134de4d4ed1ff77468b4d73e3238697b96",
+          "dweb:/ipfs/Qmc8caJctgxbzXEpxRogQMR2bnBk5U67hA7kKbUEG2PUXV"
+        ],
+        "license": "MIT"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol": {
+        "keccak256": "0xce0197c49f5bb56f1446398e20347aedb1f490b243db064ac35a9ace25a96139",
+        "urls": [
+          "bzz-raw://eb6c046bc8cc225c3343cb38630489582a0d605b6a0998cda83e675a0c8be858",
+          "dweb:/ipfs/QmdAfuH9q1kzf4KC4yAFWZxJ9sJ7PkTrH6BHRELaWVXopi"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol": {
+        "keccak256": "0xa72d8fea72c6ce0d46007cfddeee507a8aae688cfa698e34767ac32ed629dfc7",
+        "urls": [
+          "bzz-raw://f965779bd0855f0959c0a99bd4c0198eaf3546f9c87da81780e815e7f58ada2d",
+          "dweb:/ipfs/QmTaAh15dVoBqjwsnQSHzewvKgDmoj2of3t9P4Uzcnvtie"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperAgreement.sol": {
+        "keccak256": "0x9b4fab6dcac1337f78e04d67d8c2b48b1de8bd4bbf14b475840f9dbda7b8f21e",
+        "urls": [
+          "bzz-raw://cc2f3629ad0cb46bd4f595880591ad6c9d75a82d920cb9355e462fbf8022c820",
+          "dweb:/ipfs/QmXMovxK4qpWT4yffXxUVjkMNwxEfS6mtn39mLSmjaxEdW"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperApp.sol": {
+        "keccak256": "0x6cc4b0724d977190c7441dfc3be6c6e48b43b555c3370af32ef5b6600f15f53f",
+        "urls": [
+          "bzz-raw://3e89c944642772a42429f21a11017b57deb98a9198f8e4f8749f00aaee71299e",
+          "dweb:/ipfs/QmaSv9GvqikcGHJ3tcwATDHSpQw6mfnHPDtcfqcZSS7LF6"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperToken.sol": {
+        "keccak256": "0x2ccec11f964b165f64e453192793991bf28e1054069b6f709a39849a8286aeb4",
+        "urls": [
+          "bzz-raw://edbaf6db0b9c6803dcdb7c91a2ddbdba503a41ecc5cecf9c27a43643669bfff1",
+          "dweb:/ipfs/QmYpf7XFKrnB2ZAPf8cDqfvZDfyoxMHA1x2FQSYzDFE3KZ"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperTokenFactory.sol": {
+        "keccak256": "0x316aa6cd16167569d5ee47fb2e4673b1def2117c7ea56969290ab6aec97cd263",
+        "urls": [
+          "bzz-raw://a5eb13acce613a227c2c2b3da2b88ad6361c9e541ca59ccee0bb5cf42cffccc6",
+          "dweb:/ipfs/QmceA9RWHL1BWk4cPnYY55FjAdsEi1LfXrC11RbF8Wb8eW"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol": {
+        "keccak256": "0xab9dab941f99d0f0ef6125fb6eafde03378d7c3e94e613dd12fb7fbf594c3373",
+        "urls": [
+          "bzz-raw://928c6ef915dee69058d4cfcb9f2344d4fc78d9763b47b17e5c03fbff64ba3c64",
+          "dweb:/ipfs/Qmdk733ZHceatz3qbuodLCCS9TUspJJtXLoX6vWwMvrPDE"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidGovernance.sol": {
+        "keccak256": "0x90a9259d0f0bb6b1bb6d48f051277eb75df96a9fbe684a203a3a468ad19318e2",
+        "urls": [
+          "bzz-raw://9c8162a2d07ffe768920fef55292684149173afefbfba76b8fca007e55092229",
+          "dweb:/ipfs/QmducLNwrzeUXEpBjUTSMu7sfmQEwVhcYXApe4brc1zQ6V"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluidToken.sol": {
+        "keccak256": "0x9cad3866982902ea88df0874a563d2e4aeba5a5bcc6289c30cccf9b4099d2fb6",
+        "urls": [
+          "bzz-raw://e8fd960b259331f204c7cb7dcd32b09d68f4294e3b872fad00ad467609c3ef72",
+          "dweb:/ipfs/QmeZFEvsDunXQGPbXFfN5AvfKM5am1FY8Xv6e3c4tNKvgY"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/ERC20WithTokenInfo.sol": {
+        "keccak256": "0x55be78ffb441c782f612b153d7d9049e3f0dbfd412c1f7df29c896b972b2985f",
+        "urls": [
+          "bzz-raw://a223c68e38a6c9b1e363e525911bc7eda44ea517865ae53bd0d34ff858cc02ae",
+          "dweb:/ipfs/QmVruGehibG6Emr2A6JHwUnhd4NzsGkE24cbGqnDpEvrKh"
+        ],
+        "license": "AGPLv3"
+      },
+      "lib/protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/tokens/TokenInfo.sol": {
+        "keccak256": "0x7456cd394cc905aae7cdbd4601ce1c296c768c13c28e66efbb913cc070bad3e4",
+        "urls": [
+          "bzz-raw://5a6589b428b724721ba5b4dd196c8f366a6e694ef313add093f29af64496c042",
+          "dweb:/ipfs/QmSMgV6y8L6pyyzDz6kKmafVwujNWcjTqutpCBxe4uNRqg"
+        ],
+        "license": "AGPLv3"
+      },
+      "src/interfaces/IStreamManager.sol": {
+        "keccak256": "0xbd09bd13d1e50d72eafd2daafac0f838d3d9de8ee09bb6ba63d883265c6dbd39",
+        "urls": [
+          "bzz-raw://cb3dc79d3b20c551fee80cfd82eb0898df154b5627f5476954f549b260242f6d",
+          "dweb:/ipfs/QmZeB5hYhtdQa242HXitFyWHPVRNtmV222boQV2iZntSb3"
+        ],
+        "license": "SEE LICENSE IN LICENSE"
+      },
+      "src/interfaces/IcfaV1Forwarder.sol": {
+        "keccak256": "0x93e1acfd961d30da03d31d5cf0e6621f23f6d0f618c669a4dc9aa9d9f2778dd4",
+        "urls": [
+          "bzz-raw://a92361a2eb3fa033f2a6193c9b68dcd07db9e0130a52c640db9b1b8cc8d409eb",
+          "dweb:/ipfs/QmQDZS4t5tPrDXHznSG1PtuBp38vVFDM9W9cc4BSNr4N7i"
+        ],
+        "license": "SEE LICENSE IN LICENSE"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IStreamManager.sol",
+    "id": 12093,
+    "exportedSymbols": {
+      "IStreamManager": [
+        12092
+      ],
+      "ISuperToken": [
+        10654
+      ],
+      "ISuperfluid": [
+        11304
+      ],
+      "IcfaV1Forwarder": [
+        12233
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "51:362:24",
+    "nodes": [
+      {
+        "id": 12067,
+        "nodeType": "PragmaDirective",
+        "src": "51:24:24",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ]
+      },
+      {
+        "id": 12071,
+        "nodeType": "ImportDirective",
+        "src": "77:80:24",
+        "nodes": [],
+        "absolutePath": "src/interfaces/IcfaV1Forwarder.sol",
+        "file": "./IcfaV1Forwarder.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 12093,
+        "sourceUnit": 12234,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 12068,
+              "name": "IcfaV1Forwarder",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 12233,
+              "src": "85:15:24",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 12069,
+              "name": "ISuperToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10654,
+              "src": "102:11:24",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 12070,
+              "name": "ISuperfluid",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 11304,
+              "src": "115:11:24",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 12092,
+        "nodeType": "ContractDefinition",
+        "src": "159:254:24",
+        "nodes": [
+          {
+            "id": 12073,
+            "nodeType": "ErrorDefinition",
+            "src": "190:20:24",
+            "nodes": [],
+            "errorSelector": "d92e233d",
+            "name": "ZeroAddress",
+            "nameLocation": "196:11:24",
+            "parameters": {
+              "id": 12072,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "207:2:24"
+            }
+          },
+          {
+            "id": 12079,
+            "nodeType": "ErrorDefinition",
+            "src": "215:68:24",
+            "nodes": [],
+            "errorSelector": "5647ceae",
+            "name": "WrongPaymentToken",
+            "nameLocation": "221:17:24",
+            "parameters": {
+              "id": 12078,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12075,
+                  "mutability": "mutable",
+                  "name": "expectedToken",
+                  "nameLocation": "247:13:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12079,
+                  "src": "239:21:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12074,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "239:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12077,
+                  "mutability": "mutable",
+                  "name": "actualToken",
+                  "nameLocation": "270:11:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12079,
+                  "src": "262:19:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12076,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "262:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "238:44:24"
+            }
+          },
+          {
+            "id": 12085,
+            "nodeType": "ErrorDefinition",
+            "src": "288:60:24",
+            "nodes": [],
+            "errorSelector": "36e6ed5d",
+            "name": "WrongAmount",
+            "nameLocation": "294:11:24",
+            "parameters": {
+              "id": 12084,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12081,
+                  "mutability": "mutable",
+                  "name": "expectedAmount",
+                  "nameLocation": "312:14:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12085,
+                  "src": "306:20:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int96",
+                    "typeString": "int96"
+                  },
+                  "typeName": {
+                    "id": 12080,
+                    "name": "int96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "306:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int96",
+                      "typeString": "int96"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12083,
+                  "mutability": "mutable",
+                  "name": "actualAmount",
+                  "nameLocation": "334:12:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12085,
+                  "src": "328:18:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int96",
+                    "typeString": "int96"
+                  },
+                  "typeName": {
+                    "id": 12082,
+                    "name": "int96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "328:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int96",
+                      "typeString": "int96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "305:42:24"
+            }
+          },
+          {
+            "id": 12091,
+            "nodeType": "ErrorDefinition",
+            "src": "353:58:24",
+            "nodes": [],
+            "errorSelector": "11ce18b5",
+            "name": "NotHost",
+            "nameLocation": "359:7:24",
+            "parameters": {
+              "id": 12090,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12087,
+                  "mutability": "mutable",
+                  "name": "expectedHost",
+                  "nameLocation": "375:12:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12091,
+                  "src": "367:20:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12086,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12089,
+                  "mutability": "mutable",
+                  "name": "actualCaller",
+                  "nameLocation": "397:12:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12091,
+                  "src": "389:20:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12088,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "389:7:24",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "366:44:24"
+            }
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IStreamManager",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          12092
+        ],
+        "name": "IStreamManager",
+        "nameLocation": "169:14:24",
+        "scope": 12093,
+        "usedErrors": [
+          12073,
+          12079,
+          12085,
+          12091
+        ]
+      }
+    ],
+    "license": "SEE LICENSE IN LICENSE"
+  },
+  "id": 24
+}
