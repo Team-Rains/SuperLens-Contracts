@@ -130,8 +130,13 @@ contract StreamManager is
             revert WrongAmount(paymentFlowrate, incomingFlowrate);
 
         // Start a social token stream back to the subscriber.
-        // TODO: Start a stream to subscriber of social tokens.
-        // use `createFlowByOperator` in `IcfaV1Forwarder`.
+        _newCtx = CFA_V1.createFlowByOperatorWithCtx(
+            _newCtx,
+            address(SOCIAL_TOKEN),
+            subscriber,
+            ISuperToken(address(SOCIAL_TOKEN)),
+            incomingFlowrate
+        );
 
         int96 stakingContractRate = forwarder.getFlowrate(
             paymentToken,
@@ -166,7 +171,7 @@ contract StreamManager is
     }
 
     function afterAgreementUpdated(
-        ISuperToken _superToken,
+        ISuperToken /*_superToken*/,
         address, /*_agreementClass*/
         bytes32, /*_agreementId*/
         bytes calldata, /*_agreementData*/
@@ -174,6 +179,7 @@ contract StreamManager is
         bytes calldata /*_ctx*/
     )
         external
+        pure
         override
         returns (
             bytes memory /*_newCtx*/
@@ -183,11 +189,11 @@ contract StreamManager is
     }
 
     function beforeAgreementTerminated(
-        ISuperToken _superToken,
-        address _agreementClass,
-        bytes32 _agreementId,
+        ISuperToken /*_superToken*/,
+        address /*_agreementClass*/,
+        bytes32 /*_agreementId*/,
         bytes calldata _agreementData,
-        bytes calldata _ctx
+        bytes calldata /*_ctx*/
     ) external view override returns (bytes memory _cbdata) {
         if (msg.sender == HOST) {
             (address subscriber, ) = abi.decode(
@@ -205,8 +211,9 @@ contract StreamManager is
         }
     }
 
+    // TODO: Use try/catch block to handle critical errors.
     function afterAgreementTerminated(
-        ISuperToken _superToken,
+        ISuperToken /*_superToken*/,
         address, /*_agreementClass*/
         bytes32, /*_agreementId*/
         bytes calldata _agreementData,
@@ -240,10 +247,12 @@ contract StreamManager is
                 stakingContractFlowrateDelta;
 
             // Stop a social token stream back to the subscriber.
-            // TODO: Stop a stream to subscriber of social tokens.
-            // use `createFlowByOperator` in `IcfaV1Forwarder`.
-
-            // TODO: Try/Catch enclosure to catch errors when setting new flowrate fails.
+            _newCtx = CFA_V1.deleteFlowByOperatorWithCtx(
+                _newCtx,
+                address(SOCIAL_TOKEN),
+                subscriber,
+                ISuperToken(address(SOCIAL_TOKEN))
+            );
 
             // Decrease the flowrate to staking contract (10% of the original flowrate).
             _newCtx = CFA_V1.createFlowWithCtx(
