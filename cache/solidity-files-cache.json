@@ -4608,8 +4608,8 @@
       }
     },
     "src/StreamManager.sol": {
-      "lastModificationDate": 1670011880552,
-      "contentHash": "bf19dff6da8affdd7413b2ed75e71f44",
+      "lastModificationDate": 1670016298552,
+      "contentHash": "0de09a6475516b3c0db7847ca9bb02c6",
       "sourceName": "src/StreamManager.sol",
       "solcConfig": {
         "settings": {
@@ -4714,8 +4714,8 @@
       }
     },
     "src/interfaces/IStreamManager.sol": {
-      "lastModificationDate": 1670005919425,
-      "contentHash": "b836f7d68da46cee3429a4c832893202",
+      "lastModificationDate": 1670016238137,
+      "contentHash": "426c3cb752841922d446d7f732eea4d5",
       "sourceName": "src/interfaces/IStreamManager.sol",
       "solcConfig": {
         "settings": {

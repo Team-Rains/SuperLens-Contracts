@@ -72,12 +72,25 @@ contract StreamManager is
             : 0;
     }
 
+    // NOTE: If the content creator gives 0 as `_newPaymentFlowrate` it means anyone can
+    // view the gated publications.
+    function setPaymentFlowrate(int96 _newPaymentFlowrate) external {
+        if (msg.sender != CREATOR) revert NotCreator(msg.sender, CREATOR);
+        if (_newPaymentFlowrate < 0)
+            revert InvalidPaymentFlowrate(_newPaymentFlowrate);
+
+        int96 oldPaymentFlowrate = paymentFlowrate;
+        paymentFlowrate = _newPaymentFlowrate;
+
+        emit PaymentFlowrateChanged(_newPaymentFlowrate, oldPaymentFlowrate);
+    }
+
     function afterAgreementCreated(
         ISuperToken _superToken,
-        address /*_agreementClass*/,
-        bytes32 /*_agreementId*/,
+        address, /*_agreementClass*/
+        bytes32, /*_agreementId*/
         bytes calldata _agreementData,
-        bytes calldata /*_cbdata*/,
+        bytes calldata, /*_cbdata*/
         bytes calldata _ctx
     ) external override returns (bytes memory _newCtx) {
         _newCtx = _ctx;
@@ -122,20 +135,123 @@ contract StreamManager is
         );
 
         int96 stakingContractFlowrateDelta = incomingFlowrate / int96(10);
-        int96 creatorFlowrateDelta = incomingFlowrate - stakingContractFlowrateDelta;
+        int96 creatorFlowrateDelta = incomingFlowrate -
+            stakingContractFlowrateDelta;
 
         // Increase the flowrate to staking contract (10% of the original flowrate).
-        forwarder.setFlowrate(
-            paymentToken,
-            STAKING_CONTRACT,
-            stakingContractRate + stakingContractFlowrateDelta
-        );
+        if (
+            !forwarder.setFlowrate(
+                paymentToken,
+                STAKING_CONTRACT,
+                stakingContractRate + stakingContractFlowrateDelta
+            )
+        )
+            revert FlowrateChangeFailed(
+                stakingContractRate + stakingContractFlowrateDelta,
+                stakingContractRate
+            );
 
         // Increase the flowrate to creator (90% of original flowrate).
-        forwarder.setFlowrate(
-            paymentToken,
-            CREATOR,
-            creatorRate + creatorFlowrateDelta
-        );
+        if (
+            !forwarder.setFlowrate(
+                paymentToken,
+                CREATOR,
+                creatorRate + creatorFlowrateDelta
+            )
+        )
+            revert FlowrateChangeFailed(
+                creatorRate + creatorFlowrateDelta,
+                creatorRate
+            );
+    }
+
+    function afterAgreementUpdated(
+        ISuperToken _superToken,
+        address, /*_agreementClass*/
+        bytes32, /*_agreementId*/
+        bytes calldata /*_agreementData*/,
+        bytes calldata, /*_cbdata*/
+        bytes calldata /*_ctx*/
+    ) external override returns (bytes memory /*_newCtx*/) {
+        revert UpdatesNotPermitted();
+    }
+
+    function beforeAgreementTerminated(
+        ISuperToken _superToken,
+        address _agreementClass,
+        bytes32 _agreementId,
+        bytes calldata _agreementData,
+        bytes calldata _ctx
+    ) external view override returns (bytes memory _cbdata) {
+        if (msg.sender == HOST) {
+            (address subscriber, ) = abi.decode(
+                _agreementData,
+                (address, address)
+            );
+
+            int96 oldIncomingFlowrate = FORWARDER.getFlowrate(
+                ISuperToken(address(PAYMENT_TOKEN)),
+                subscriber,
+                address(this)
+            );
+
+            _cbdata = abi.encode(oldIncomingFlowrate);
+        }
+    }
+
+    function afterAgreementTerminated(
+        ISuperToken _superToken,
+        address, /*_agreementClass*/
+        bytes32, /*_agreementId*/
+        bytes calldata _agreementData,
+        bytes calldata _cbdata,
+        bytes calldata _ctx
+    ) external override returns (bytes memory _newCtx) {
+        _newCtx = _ctx;
+
+        if (msg.sender == HOST) {
+            ISuperToken paymentToken = PAYMENT_TOKEN;
+            IcfaV1Forwarder forwarder = FORWARDER;
+            (address subscriber, ) = abi.decode(
+                _agreementData,
+                (address, address)
+            );
+            int96 oldIncomingFlowrate = abi.decode(_cbdata, (int96));
+            int96 stakingContractRate = forwarder.getFlowrate(
+                paymentToken,
+                address(this),
+                STAKING_CONTRACT
+            );
+            int96 creatorRate = forwarder.getFlowrate(
+                paymentToken,
+                address(this),
+                CREATOR
+            );
+
+            int96 stakingContractFlowrateDelta = oldIncomingFlowrate /
+                int96(10);
+            int96 creatorFlowrateDelta = oldIncomingFlowrate -
+                stakingContractFlowrateDelta;
+
+            // Stop a social token stream back to the subscriber.
+            // TODO: Stop a stream to subscriber of social tokens.
+            // use `createFlowByOperator` in `IcfaV1Forwarder`.
+
+            // TODO: Try/Catch enclosure to catch errors when setting new flowrate fails.
+
+            // Decrease the flowrate to staking contract (10% of the original flowrate).
+            forwarder.setFlowrate(
+                paymentToken,
+                STAKING_CONTRACT,
+                stakingContractRate - stakingContractFlowrateDelta
+            );
+
+            // Decrease the flowrate to creator (90% of original flowrate).
+            forwarder.setFlowrate(
+                paymentToken,
+                CREATOR,
+                creatorRate - creatorFlowrateDelta
+            );
+        }
     }
 }
