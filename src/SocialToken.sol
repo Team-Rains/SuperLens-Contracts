@@ -7,7 +7,7 @@ import {IcfaV1Forwarder, ISuperToken, ISuperfluid} from "./interfaces/IcfaV1Forw
 /// @title Minimal Pure Super Token
 /// @author jtriley.eth
 /// @notice Pre-minted supply. This is includes no custom logic. Used in `PureSuperTokenDeployer`
-contract PureSuperToken is SuperTokenBase {
+contract SocialToken is SuperTokenBase {
     /// @dev Upgrades the super token with the factory, then initializes.
     /// @param _factory super token factory for initialization
     /// @param _name super token name

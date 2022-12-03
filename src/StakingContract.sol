@@ -3,30 +3,57 @@ pragma solidity ^0.8.13;
 
 import {IConstantFlowAgreementV1} from "protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol";
 import {IInstantDistributionAgreementV1} from "protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IInstantDistributionAgreementV1.sol";
-
 import {ISuperToken, ISuperfluid, SuperAppBase, SuperAppDefinitions} from "protocol-monorepo/packages/ethereum-contracts/contracts/apps/SuperAppBase.sol";
-
 import {IERC1820Registry} from "lib/openzeppelin-contracts/contracts/utils/introspection/IERC1820Registry.sol";
-
 import {IInstantDistributionAgreementV1, IDAv1Library} from "@superfluid-finance/ethereum-contracts/contracts/apps/IDAv1Library.sol";
+import {Initializable} from "openzeppelin-contracts/proxy/utils/Initializable.sol";
+import "forge-std/console.sol";
 
-contract ProspectStaking is SuperAppBase {
+contract StakingContract is SuperAppBase, Initializable {
     IERC1820Registry private registry1820 =
         IERC1820Registry(0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24);
     mapping(address => uint256) public stakedBalance;
-    ISuperToken immutable cashToken;
-    ISuperToken immutable stakingToken;
+    // ISuperToken immutable cashToken;
+    // ISuperToken immutable stakingToken;
+    ISuperToken public cashToken;
+    ISuperToken public stakingToken;
     uint32 internal constant INDEX_ID = 0;
 
     using IDAv1Library for IDAv1Library.InitData;
     IDAv1Library.InitData internal _idaLib;
 
-    constructor(
+    // constructor(
+    //     ISuperfluid host,
+    //     IInstantDistributionAgreementV1 ida,
+    //     ISuperToken cash,
+    //     ISuperToken staking
+    // ) {
+    //     registry1820.setInterfaceImplementer(
+    //         address(this),
+    //         keccak256("ERC777TokensRecipient"),
+    //         address(this)
+    //     );
+    //     cashToken = cash;
+    //     stakingToken = staking;
+    //     host.registerApp(
+    //         SuperAppDefinitions.APP_LEVEL_FINAL |
+    //             SuperAppDefinitions.BEFORE_AGREEMENT_CREATED_NOOP |
+    //             SuperAppDefinitions.BEFORE_AGREEMENT_UPDATED_NOOP |
+    //             SuperAppDefinitions.BEFORE_AGREEMENT_TERMINATED_NOOP |
+    //             SuperAppDefinitions.AFTER_AGREEMENT_CREATED_NOOP |
+    //             SuperAppDefinitions.AFTER_AGREEMENT_UPDATED_NOOP |
+    //             SuperAppDefinitions.AFTER_AGREEMENT_TERMINATED_NOOP
+    //     );
+    //     _idaLib = IDAv1Library.InitData(host, ida);
+    //     _idaLib.createIndex(cash, INDEX_ID);
+    // }
+
+    function initialize(
         ISuperfluid host,
         IInstantDistributionAgreementV1 ida,
         ISuperToken cash,
         ISuperToken staking
-    ) {
+    ) external initializer {
         registry1820.setInterfaceImplementer(
             address(this),
             keccak256("ERC777TokensRecipient"),
@@ -34,15 +61,6 @@ contract ProspectStaking is SuperAppBase {
         );
         cashToken = cash;
         stakingToken = staking;
-        host.registerApp(
-            SuperAppDefinitions.APP_LEVEL_FINAL |
-                SuperAppDefinitions.BEFORE_AGREEMENT_CREATED_NOOP |
-                SuperAppDefinitions.BEFORE_AGREEMENT_UPDATED_NOOP |
-                SuperAppDefinitions.BEFORE_AGREEMENT_TERMINATED_NOOP |
-                SuperAppDefinitions.AFTER_AGREEMENT_CREATED_NOOP |
-                SuperAppDefinitions.AFTER_AGREEMENT_UPDATED_NOOP |
-                SuperAppDefinitions.AFTER_AGREEMENT_TERMINATED_NOOP
-        );
         _idaLib = IDAv1Library.InitData(host, ida);
         _idaLib.createIndex(cash, INDEX_ID);
     }
