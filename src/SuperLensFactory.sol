@@ -2,7 +2,10 @@
 pragma solidity ^0.8.15;
 
 import {Clones} from "openzeppelin-contracts/proxy/Clones.sol";
-import {IcfaV1Forwarder, ISuperToken, ISuperfluid, IConstantFlowAgreementV1} from "./interfaces/IcfaV1Forwarder.sol";
+import {IcfaV1Forwarder, IConstantFlowAgreementV1} from "./interfaces/IcfaV1Forwarder.sol";
+import {ISuperfluid, ISuperApp, ISuperToken} from "protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/ISuperfluid.sol";
+import {SuperAppDefinitions} from "protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/superfluid/Definitions.sol";
+
 import {IInstantDistributionAgreementV1} from "protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IInstantDistributionAgreementV1.sol";
 import {IConstantFlowAgreementV1} from "protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol";
 import {StreamManager} from "./StreamManager.sol";
@@ -38,6 +41,11 @@ contract SuperLensFactory {
     address public streamManagerImplementation;
     address public socialTokenImplementation;
     address public stakingContractImplementation;
+
+    uint256 private constant CONFIG_WORD =
+        SuperAppDefinitions.BEFORE_AGREEMENT_CREATED_NOOP |
+            SuperAppDefinitions.BEFORE_AGREEMENT_UPDATED_NOOP |
+            SuperAppDefinitions.APP_LEVEL_FINAL;
 
     // Creator => { StreamManager, SocialToken, StakingContract }
     mapping(address => CreatorSet) public creatorSet;
@@ -87,7 +95,9 @@ contract SuperLensFactory {
             revert CreatorSetExists(msg.sender);
 
         address newStreamManager = Clones.clone(streamManagerImplementation);
-        address payable newSocialToken = payable(Clones.clone(socialTokenImplementation));
+        address payable newSocialToken = payable(
+            Clones.clone(socialTokenImplementation)
+        );
         address newStakingContract = Clones.clone(
             stakingContractImplementation
         );
@@ -97,7 +107,7 @@ contract SuperLensFactory {
             socialToken: newSocialToken,
             stakingContract: newStakingContract
         });
-        
+
         StreamManager(newStreamManager).initialize(
             msg.sender,
             _paymentToken,
@@ -126,12 +136,16 @@ contract SuperLensFactory {
             ISuperToken(newSocialToken)
         );
 
+        ISuperfluid(HOST).registerAppByFactory(
+            ISuperApp(newStreamManager),
+            CONFIG_WORD
+        );
+
         creatorSet[msg.sender] = CreatorSet({
             streamManager: newStreamManager,
             socialToken: newSocialToken,
             stakingContract: newStakingContract
         });
-
 
         emit NewCreatorSet(
             msg.sender,
