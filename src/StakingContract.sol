@@ -4,25 +4,16 @@ pragma solidity ^0.8.13;
 import {IConstantFlowAgreementV1} from "protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IConstantFlowAgreementV1.sol";
 import {IInstantDistributionAgreementV1} from "protocol-monorepo/packages/ethereum-contracts/contracts/interfaces/agreements/IInstantDistributionAgreementV1.sol";
 
-import {
-    ISuperToken,
-    ISuperfluid,
-    SuperAppBase,
-    SuperAppDefinitions
-} from "protocol-monorepo/packages/ethereum-contracts/contracts/apps/SuperAppBase.sol";
+import {ISuperToken, ISuperfluid, SuperAppBase, SuperAppDefinitions} from "protocol-monorepo/packages/ethereum-contracts/contracts/apps/SuperAppBase.sol";
 
-import { IERC1820Registry } from "lib/openzeppelin-contracts/contracts/utils/introspection/IERC1820Registry.sol";
+import {IERC1820Registry} from "lib/openzeppelin-contracts/contracts/utils/introspection/IERC1820Registry.sol";
 
-import {
-    IInstantDistributionAgreementV1,
-    IDAv1Library
-} from "@superfluid-finance/ethereum-contracts/contracts/apps/IDAv1Library.sol";
+import {IInstantDistributionAgreementV1, IDAv1Library} from "@superfluid-finance/ethereum-contracts/contracts/apps/IDAv1Library.sol";
 
 contract ProspectStaking is SuperAppBase {
-
-    IERC1820Registry private registry1820 = IERC1820Registry(0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24);
+    IERC1820Registry private registry1820 =
+        IERC1820Registry(0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24);
     mapping(address => uint256) public stakedBalance;
-    mapping(address => uint256) public withdrawClock;
     ISuperToken immutable cashToken;
     ISuperToken immutable stakingToken;
     uint32 internal constant INDEX_ID = 0;
@@ -36,69 +27,81 @@ contract ProspectStaking is SuperAppBase {
         ISuperToken cash,
         ISuperToken staking
     ) {
-      registry1820.setInterfaceImplementer(
-        address(this),
-        keccak256("ERC777TokensRecipient"),
-        address(this)
-      );
-      cashToken = cash;
-      stakingToken = staking;
-      host.registerApp(
-        SuperAppDefinitions.APP_LEVEL_FINAL
-          | SuperAppDefinitions.BEFORE_AGREEMENT_CREATED_NOOP
-          | SuperAppDefinitions.BEFORE_AGREEMENT_UPDATED_NOOP
-          | SuperAppDefinitions.BEFORE_AGREEMENT_TERMINATED_NOOP
-          | SuperAppDefinitions.AFTER_AGREEMENT_CREATED_NOOP
-          | SuperAppDefinitions.AFTER_AGREEMENT_UPDATED_NOOP
-          | SuperAppDefinitions.AFTER_AGREEMENT_TERMINATED_NOOP
-      );
-      _idaLib = IDAv1Library.InitData(host, ida);
-      _idaLib.createIndex(cash, INDEX_ID);
-    }
-
-    function _stake(address staker, uint256 amount) internal {
-      stakedBalance[staker] += amount;
-      withdrawClock[staker] = 0;
-      _idaLib.updateSubscriptionUnits(cashToken, INDEX_ID, staker, uint128(stakedBalance[staker]));
-    }
-
-    function unstake() external {
-      withdrawClock[msg.sender] = block.timestamp;
-      _idaLib.deleteSubscription(
-                cashToken,
-                address(this),
-                INDEX_ID,
-                msg.sender
-            );
-    }
-
-    function withdraw() external {
-      require(
-        withdrawClock[msg.sender] != 0
-          && block.timestamp >= 2 weeks + withdrawClock[msg.sender]
-      );
-      uint256 amount = stakedBalance[msg.sender];
-      stakedBalance[msg.sender] = 0;
-      withdrawClock[msg.sender] = 0;
-      stakingToken.transfer(msg.sender, amount);
+        registry1820.setInterfaceImplementer(
+            address(this),
+            keccak256("ERC777TokensRecipient"),
+            address(this)
+        );
+        cashToken = cash;
+        stakingToken = staking;
+        host.registerApp(
+            SuperAppDefinitions.APP_LEVEL_FINAL |
+                SuperAppDefinitions.BEFORE_AGREEMENT_CREATED_NOOP |
+                SuperAppDefinitions.BEFORE_AGREEMENT_UPDATED_NOOP |
+                SuperAppDefinitions.BEFORE_AGREEMENT_TERMINATED_NOOP |
+                SuperAppDefinitions.AFTER_AGREEMENT_CREATED_NOOP |
+                SuperAppDefinitions.AFTER_AGREEMENT_UPDATED_NOOP |
+                SuperAppDefinitions.AFTER_AGREEMENT_TERMINATED_NOOP
+        );
+        _idaLib = IDAv1Library.InitData(host, ida);
+        _idaLib.createIndex(cash, INDEX_ID);
     }
 
     function tokensReceived(
-        address operator,
+        address, /*operator*/
         address from,
-        address to,
+        address, /*to*/
         uint256 amount,
-        bytes calldata userData,
-        bytes calldata operatorData
+        bytes calldata, /*userData*/
+        bytes calldata /*operatorData*/
     ) external {
-      if (msg.sender == address(stakingToken)) {
-        _stake(from, amount);
-      }
-      if (msg.sender == address(cashToken)) {
-        _idaLib.distribute(cashToken, INDEX_ID, amount);
-      }
-      else {
-        revert();
-      }
+        if (msg.sender == address(stakingToken)) {
+            // If someone is sending the staking token (social token), the tokens are
+            // staked on their behalf.
+            _stake(from, amount);
+        } else if (msg.sender == address(cashToken)) {
+            // If anyone transfers the cash token, a distribution takes place.
+            // The sender will lose a part or whole of his money.
+            _idaLib.distribute(cashToken, INDEX_ID, amount);
+        } else {
+            revert();
+        }
+    }
+
+    function unstake() external {
+        _idaLib.distribute(
+            cashToken,
+            INDEX_ID,
+            cashToken.balanceOf(address(this))
+        );
+        _idaLib.deleteSubscription(
+            cashToken,
+            address(this),
+            INDEX_ID,
+            msg.sender
+        );
+    }
+
+    // TODO: Figure out if we need to distribute cash tokens before the
+    // withdrawal of the staking token.
+    function withdraw() external {
+        uint256 amount = stakedBalance[msg.sender];
+        stakedBalance[msg.sender] = 0;
+        stakingToken.transfer(msg.sender, amount);
+    }
+
+    function _stake(address staker, uint256 amount) internal {
+        stakedBalance[staker] += amount;
+        _idaLib.distribute(
+            cashToken,
+            INDEX_ID,
+            cashToken.balanceOf(address(this))
+        );
+        _idaLib.updateSubscriptionUnits(
+            cashToken,
+            INDEX_ID,
+            staker,
+            uint128(stakedBalance[staker])
+        );
     }
 }
