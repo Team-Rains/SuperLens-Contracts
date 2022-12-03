@@ -271,6 +271,8 @@ contract StreamManager is
             int96 creatorFlowrateDelta = oldIncomingFlowrate -
                 stakingContractFlowrateDelta;
 
+            console.log("1");
+
             // Stop a social token stream back to the subscriber.
             _newCtx = CFA_V1.deleteFlowByOperatorWithCtx(
                 _newCtx,
@@ -296,6 +298,8 @@ contract StreamManager is
                 );
             }
 
+            console.log("2");
+
             // Decrease the flowrate to staking contract (10% of the original flowrate).
             if (creatorRate == creatorFlowrateDelta) {
                 _newCtx = CFA_V1.deleteFlowWithCtx(
@@ -312,6 +316,8 @@ contract StreamManager is
                     creatorRate - creatorFlowrateDelta
                 );
             }
+
+            console.log("3");
         }
     }
 }
