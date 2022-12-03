@@ -9,7 +9,7 @@ import "lib/custom-supertokens/contracts/base/UUPSProxy.sol";
 /// @title Minimal Pure Super Token
 /// @author jtriley.eth
 /// @notice Pre-minted supply. This is includes no custom logic. Used in `PureSuperTokenDeployer`
-contract SocialToken is  SuperTokenBase {
+contract SocialToken is SuperTokenBase {
     /// @dev Upgrades the super token with the factory, then initializes.
     /// @param _factory super token factory for initialization
     /// @param _name super token name
@@ -24,14 +24,14 @@ contract SocialToken is  SuperTokenBase {
         uint256 _initialSupply,
         address _streamManager,
         address _forwarder
-    ) external  {
+    ) external {
         _initialize(_factory, _name, _symbol);
 
         _mint(_receiver, _initialSupply, "");
 
-        // // control to the stream manager for using createFlowByOperator permission
-        // IcfaV1Forwarder forwarder = IcfaV1Forwarder(_forwarder);
-        // forwarder.grantPermissions(ISuperToken(address(this)), _streamManager);
+        // control to the stream manager for using createFlowByOperator permission
+        IcfaV1Forwarder forwarder = IcfaV1Forwarder(_forwarder);
+        forwarder.grantPermissions(ISuperToken(address(this)), _streamManager);
     }
 }
 // First this contract is deployed, then Stream manager, then initialize the social token.
