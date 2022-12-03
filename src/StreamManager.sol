@@ -10,7 +10,6 @@ import {IERC721Mod} from "./interfaces/IERC721Mod.sol";
 import {IStreamManager} from "./interfaces/IStreamManager.sol";
 import "forge-std/console.sol";
 
-// TODO: Add `Ownable`?
 // TODO: [Optional] multi tier system.
 contract StreamManager is
     IStreamManager,

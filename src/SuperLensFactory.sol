@@ -96,6 +96,12 @@ contract SuperLensFactory {
             stakingContractImplementation
         );
 
+        creatorSet[msg.sender] = CreatorSet({
+            streamManager: newStreamManager,
+            socialToken: newSocialToken,
+            stakingContract: newStakingContract
+        });
+        
         StreamManager(newStreamManager).initialize(
             msg.sender,
             _paymentToken,
@@ -123,13 +129,6 @@ contract SuperLensFactory {
             ISuperToken(_paymentToken),
             ISuperToken(newSocialToken)
         );
-
-        creatorSet[msg.sender] = CreatorSet({
-            streamManager: newStreamManager,
-            socialToken: newSocialToken,
-            stakingContract: newStakingContract
-        });
-
 
         emit NewCreatorSet(
             msg.sender,

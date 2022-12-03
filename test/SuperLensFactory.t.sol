@@ -1,7 +1,10 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity ^0.8.15;
 
-import {StreamManager} from "../src/StreamManager.sol";
-import {SocialToken} from "../src/SocialToken.sol";
+import "./helpers/Setup.sol";
+import "forge-std/Test.sol";
 import "forge-std/console.sol";
 
+contract SuperLensFactoryTest is Test, Setup {
+
+}
