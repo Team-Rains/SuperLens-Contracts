@@ -14,4 +14,6 @@ interface IStreamManager {
     error FlowrateChangeFailed(int96 newFlowrate, int96 oldFlowrate);
 
     event PaymentFlowrateChanged(int96 newPaymentFlowrate, int96 oldPaymentFlowrate);
+
+    
 }

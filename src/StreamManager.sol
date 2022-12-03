@@ -8,7 +8,6 @@ import {IcfaV1Forwarder, ISuperToken, ISuperfluid, IConstantFlowAgreementV1} fro
 import {IERC721Mod} from "./interfaces/IERC721Mod.sol";
 import {IStreamManager} from "./interfaces/IStreamManager.sol";
 import {SocialToken} from "./SocialToken.sol";
-
 import "forge-std/console.sol";
 
 // TODO: Add `Ownable`?
@@ -21,14 +20,13 @@ contract StreamManager is
 {
     using CFAv1Library for CFAv1Library.InitData;
 
-    address CREATOR;
-
-    // TODO: Change this to `IStakingContract`.
-    address STAKING_CONTRACT;
+    address public CREATOR;
 
     ISuperToken public PAYMENT_TOKEN;
 
     SocialToken public SOCIAL_TOKEN;
+
+    address public STAKING_CONTRACT;
 
     IcfaV1Forwarder public FORWARDER;
 
@@ -122,7 +120,7 @@ contract StreamManager is
 
         // Check if the amount going to be streamed is correct.
         int96 incomingFlowrate = forwarder.getFlowrate(
-            ISuperToken(address(SOCIAL_TOKEN)), // token
+            paymentToken, // token
             subscriber, // sender
             address(this) // receiver
         );
@@ -150,29 +148,55 @@ contract StreamManager is
             CREATOR
         );
 
+        console.log("Staking contract rate: ");
+        console.logInt(stakingContractRate);
+
+        console.log("Creator rate: ");
+        console.logInt(creatorRate);
+
         int96 stakingContractFlowrateDelta = incomingFlowrate / int96(10);
         int96 creatorFlowrateDelta = incomingFlowrate -
             stakingContractFlowrateDelta;
 
         // Increase the flowrate to staking contract (10% of the original flowrate).
-        _newCtx = CFA_V1.createFlowWithCtx(
-            _newCtx,
-            STAKING_CONTRACT,
-            PAYMENT_TOKEN,
-            stakingContractRate + stakingContractFlowrateDelta
-        );
+        // Note: If the subscriber is the first one, you need to open a flow.
+        if (stakingContractRate != int96(0)) {
+            _newCtx = CFA_V1.updateFlowWithCtx(
+                _newCtx,
+                STAKING_CONTRACT,
+                paymentToken,
+                stakingContractRate + stakingContractFlowrateDelta
+            );
+        } else {
+            _newCtx = CFA_V1.createFlowWithCtx(
+                _newCtx,
+                STAKING_CONTRACT,
+                paymentToken,
+                stakingContractFlowrateDelta
+            );
+        }
 
         // Increase the flowrate to creator (90% of original flowrate).
-        _newCtx = CFA_V1.createFlowWithCtx(
-            _newCtx,
-            STAKING_CONTRACT,
-            PAYMENT_TOKEN,
-            creatorRate + creatorFlowrateDelta
-        );
+        // Note: If the subscriber is the first one, you need to open a flow.
+        if (creatorRate != int96(0)) {
+            _newCtx = CFA_V1.updateFlowWithCtx(
+                _newCtx,
+                CREATOR,
+                paymentToken,
+                creatorRate + creatorFlowrateDelta
+            );
+        } else {
+            _newCtx = CFA_V1.createFlowWithCtx(
+                _newCtx,
+                CREATOR,
+                paymentToken,
+                creatorRate + creatorFlowrateDelta
+            );
+        }
     }
 
     function afterAgreementUpdated(
-        ISuperToken /*_superToken*/,
+        ISuperToken, /*_superToken*/
         address, /*_agreementClass*/
         bytes32, /*_agreementId*/
         bytes calldata, /*_agreementData*/
@@ -190,9 +214,9 @@ contract StreamManager is
     }
 
     function beforeAgreementTerminated(
-        ISuperToken /*_superToken*/,
-        address /*_agreementClass*/,
-        bytes32 /*_agreementId*/,
+        ISuperToken, /*_superToken*/
+        address, /*_agreementClass*/
+        bytes32, /*_agreementId*/
         bytes calldata _agreementData,
         bytes calldata /*_ctx*/
     ) external view override returns (bytes memory _cbdata) {
@@ -214,7 +238,7 @@ contract StreamManager is
 
     // TODO: Use try/catch block to handle critical errors.
     function afterAgreementTerminated(
-        ISuperToken /*_superToken*/,
+        ISuperToken, /*_superToken*/
         address, /*_agreementClass*/
         bytes32, /*_agreementId*/
         bytes calldata _agreementData,
@@ -256,20 +280,38 @@ contract StreamManager is
             );
 
             // Decrease the flowrate to staking contract (10% of the original flowrate).
-            _newCtx = CFA_V1.createFlowWithCtx(
-                _newCtx,
-                STAKING_CONTRACT,
-                PAYMENT_TOKEN,
-                stakingContractRate + stakingContractFlowrateDelta
-            );
+            if (stakingContractRate == stakingContractFlowrateDelta) {
+                _newCtx = CFA_V1.deleteFlowWithCtx(
+                    _newCtx,
+                    address(this),
+                    STAKING_CONTRACT,
+                    paymentToken
+                );
+            } else {
+                _newCtx = CFA_V1.updateFlowWithCtx(
+                    _newCtx,
+                    STAKING_CONTRACT,
+                    paymentToken,
+                    stakingContractRate - stakingContractFlowrateDelta
+                );
+            }
 
             // Decrease the flowrate to staking contract (10% of the original flowrate).
-            _newCtx = CFA_V1.createFlowWithCtx(
-                _newCtx,
-                STAKING_CONTRACT,
-                PAYMENT_TOKEN,
-                creatorRate + creatorFlowrateDelta
-            );
+            if (creatorRate == creatorFlowrateDelta) {
+                _newCtx = CFA_V1.deleteFlowWithCtx(
+                    _newCtx,
+                    address(this),
+                    CREATOR,
+                    paymentToken
+                );
+            } else {
+                _newCtx = CFA_V1.updateFlowWithCtx(
+                    _newCtx,
+                    CREATOR,
+                    paymentToken,
+                    creatorRate - creatorFlowrateDelta
+                );
+            }
         }
     }
 }
