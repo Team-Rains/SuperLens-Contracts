@@ -87,7 +87,7 @@ contract SuperLensFactory {
             revert CreatorSetExists(msg.sender);
 
         address newStreamManager = Clones.clone(streamManagerImplementation);
-        address newSocialToken = Clones.clone(socialTokenImplementation);
+        address payable newSocialToken = payable(Clones.clone(socialTokenImplementation));
         address newStakingContract = Clones.clone(
             stakingContractImplementation
         );

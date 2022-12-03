@@ -8,6 +8,7 @@ import {IcfaV1Forwarder, ISuperToken, ISuperfluid, IConstantFlowAgreementV1} fro
 import {IERC721Mod} from "./interfaces/IERC721Mod.sol";
 import {IStreamManager} from "./interfaces/IStreamManager.sol";
 import {SocialToken} from "./SocialToken.sol";
+
 import "forge-std/console.sol";
 
 // TODO: Add `Ownable`?
@@ -27,7 +28,7 @@ contract StreamManager is
 
     ISuperToken public PAYMENT_TOKEN;
 
-    PureSuperToken public SOCIAL_TOKEN;
+    SocialToken public SOCIAL_TOKEN;
 
     IcfaV1Forwarder public FORWARDER;
 
@@ -40,7 +41,7 @@ contract StreamManager is
     function initialize(
         address _creator,
         address _paymentToken,
-        address _socialToken,
+        address payable _socialToken,
         address _stakingContract,
         address _forwarder,
         address _host,

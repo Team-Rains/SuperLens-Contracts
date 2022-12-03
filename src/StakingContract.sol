@@ -60,10 +60,14 @@ contract StakingContract is SuperAppBase, Initializable {
             address(this)
         );
         
+        console.log("1"); 
+
         cashToken = cash;
         stakingToken = staking;
         _idaLib = IDAv1Library.InitData(host, ida);
-        _idaLib.createIndex(cash, INDEX_ID);
+        console.log("2");
+        // _idaLib.createIndex(cash, INDEX_ID);
+        // console.log("3");
     }
 
     function tokensReceived(
