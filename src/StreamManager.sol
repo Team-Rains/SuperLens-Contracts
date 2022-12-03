@@ -10,6 +10,7 @@ import {IStreamManager} from "./interfaces/IStreamManager.sol";
 import {SocialToken} from "./SocialToken.sol";
 import "forge-std/console.sol";
 
+// TODO: Add `Ownable`?
 // TODO: [Optional] multi tier system.
 contract StreamManager is
     IStreamManager,

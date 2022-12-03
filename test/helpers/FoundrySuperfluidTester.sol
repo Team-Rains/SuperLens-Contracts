@@ -76,6 +76,13 @@ contract FoundrySuperfluidTester is Test {
     }
 
     function fillWallet(address _receiver) public virtual {
+        // token.mint(_receiver, INIT_TOKEN_BALANCE);
+
+        // vm.startPrank(_receiver);
+        // token.approve(address(superToken), INIT_SUPER_TOKEN_BALANCE);
+        // superToken.upgrade(INIT_SUPER_TOKEN_BALANCE);
+        // _expectedTotalSupply += INIT_SUPER_TOKEN_BALANCE;
+        // vm.stopPrank();
         mintToken(_receiver);
         mintSuperToken(_receiver);
     }
