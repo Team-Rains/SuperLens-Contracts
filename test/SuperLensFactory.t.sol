@@ -6,5 +6,6 @@ import "forge-std/Test.sol";
 import "forge-std/console.sol";
 
 contract SuperLensFactoryTest is Test, Setup {
-
+    function testInitCreatorSet() public {
+    }
 }

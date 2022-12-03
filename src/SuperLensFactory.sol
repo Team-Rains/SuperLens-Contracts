@@ -77,9 +77,7 @@ contract SuperLensFactory {
         string memory _stName,
         string memory _stSymbol,
         uint256 _initSupply
-    )
-        external
-    {
+    ) external {
         if (_paymentToken == address(0)) revert ZeroAddress();
         if (_paymentFlowrate < 0)
             revert InvalidPaymentFlowrate(_paymentFlowrate);
@@ -89,9 +87,7 @@ contract SuperLensFactory {
             revert CreatorSetExists(msg.sender);
 
         address newStreamManager = Clones.clone(streamManagerImplementation);
-        address payable newSocialToken = payable(
-            Clones.clone(socialTokenImplementation)
-        );
+        address newSocialToken = Clones.clone(socialTokenImplementation);
         address newStakingContract = Clones.clone(
             stakingContractImplementation
         );
@@ -101,7 +97,7 @@ contract SuperLensFactory {
             socialToken: newSocialToken,
             stakingContract: newStakingContract
         });
-        
+
         StreamManager(newStreamManager).initialize(
             msg.sender,
             _paymentToken,

@@ -59,6 +59,7 @@ contract StakingContract is SuperAppBase, Initializable {
             keccak256("ERC777TokensRecipient"),
             address(this)
         );
+        
         cashToken = cash;
         stakingToken = staking;
         _idaLib = IDAv1Library.InitData(host, ida);

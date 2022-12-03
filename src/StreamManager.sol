@@ -3,11 +3,11 @@ pragma solidity ^0.8.15;
 
 import {SuperAppBase} from "protocol-monorepo/packages/ethereum-contracts/contracts/apps/SuperAppBase.sol";
 import {CFAv1Library} from "protocol-monorepo/packages/ethereum-contracts/contracts/apps/CFAv1Library.sol";
-import {PureSuperToken} from "lib/custom-supertokens/contracts/PureSuperToken.sol";
 import {Initializable} from "openzeppelin-contracts/proxy/utils/Initializable.sol";
 import {IcfaV1Forwarder, ISuperToken, ISuperfluid, IConstantFlowAgreementV1} from "./interfaces/IcfaV1Forwarder.sol";
 import {IERC721Mod} from "./interfaces/IERC721Mod.sol";
 import {IStreamManager} from "./interfaces/IStreamManager.sol";
+import {SocialToken} from "./SocialToken.sol";
 import "forge-std/console.sol";
 
 // TODO: [Optional] multi tier system.
@@ -39,7 +39,7 @@ contract StreamManager is
     function initialize(
         address _creator,
         address _paymentToken,
-        address payable _socialToken,
+        address _socialToken,
         address _stakingContract,
         address _forwarder,
         address _host,
@@ -53,7 +53,7 @@ contract StreamManager is
         ) revert ZeroAddress();
 
         FORWARDER = IcfaV1Forwarder(_forwarder);
-        SOCIAL_TOKEN = PureSuperToken(_socialToken);
+        SOCIAL_TOKEN = SocialToken(_socialToken);
         PAYMENT_TOKEN = ISuperToken(_paymentToken);
         STAKING_CONTRACT = _stakingContract;
         HOST = _host;
