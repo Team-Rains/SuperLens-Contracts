@@ -12,7 +12,9 @@ import "forge-std/console.sol";
 contract StakingContract is SuperAppBase, Initializable {
     IERC1820Registry private registry1820 =
         IERC1820Registry(0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24);
+
     mapping(address => uint256) public stakedBalance;
+
     ISuperToken public cashToken;
     ISuperToken public stakingToken;
     uint32 internal constant INDEX_ID = 0;
@@ -34,6 +36,9 @@ contract StakingContract is SuperAppBase, Initializable {
 
     function stake(uint256 _amount) external {
         _stake(msg.sender, _amount);
+
+        // receive their SocialToken
+        bool sent = stakingToken.transferFrom(msg.sender, address(this), _amount);
     }
 
     function unstake() external {
@@ -48,6 +53,7 @@ contract StakingContract is SuperAppBase, Initializable {
             INDEX_ID,
             msg.sender
         );
+        bool sent = stakingToken.transferFrom(address(this), msg.sender, stakedBalance[msg.sender]);
     }
 
     // TODO: Figure out if we need to distribute cash tokens before the
