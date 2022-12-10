@@ -10,8 +10,6 @@ import {IStreamManager} from "./interfaces/IStreamManager.sol";
 import {SocialToken} from "./SocialToken.sol";
 import "forge-std/console.sol";
 
-// TODO: Add `Ownable`?
-// TODO: [Optional] multi tier system.
 contract StreamManager is
     IStreamManager,
     IERC721Mod,
@@ -147,12 +145,6 @@ contract StreamManager is
             address(this),
             CREATOR
         );
-
-        console.log("Staking contract rate: ");
-        console.logInt(stakingContractRate);
-
-        console.log("Creator rate: ");
-        console.logInt(creatorRate);
 
         int96 stakingContractFlowrateDelta = incomingFlowrate / int96(10);
         int96 creatorFlowrateDelta = incomingFlowrate -

@@ -34,11 +34,16 @@ contract StakingContract is SuperAppBase, Initializable {
         _idaLib.createIndex(cash, INDEX_ID);
     }
 
+    function distribute() external {
+        _idaLib.distribute(
+            cashToken,
+            INDEX_ID,
+            cashToken.balanceOf(address(this))
+        );
+    }
+
     function stake(uint256 _amount) external {
         _stake(msg.sender, _amount);
-
-        // receive their SocialToken
-        bool sent = stakingToken.transferFrom(msg.sender, address(this), _amount);
     }
 
     function unstake() external {
@@ -53,7 +58,13 @@ contract StakingContract is SuperAppBase, Initializable {
             INDEX_ID,
             msg.sender
         );
-        bool sent = stakingToken.transferFrom(address(this), msg.sender, stakedBalance[msg.sender]);
+        if (
+            !stakingToken.transferFrom(
+                address(this),
+                msg.sender,
+                stakedBalance[msg.sender]
+            )
+        ) revert("Can't unstake");
     }
 
     // TODO: Figure out if we need to distribute cash tokens before the
@@ -61,21 +72,31 @@ contract StakingContract is SuperAppBase, Initializable {
     function withdraw() external {
         uint256 amount = stakedBalance[msg.sender];
         stakedBalance[msg.sender] = 0;
-        stakingToken.transfer(msg.sender, amount);
+
+        if (!stakingToken.transfer(msg.sender, amount))
+            revert("Can't withdraw");
     }
 
     function _stake(address staker, uint256 amount) internal {
+        if (stakingToken.balanceOf(address(this)) != 0) {
+            _idaLib.distribute(
+                cashToken,
+                INDEX_ID,
+                cashToken.balanceOf(address(this))
+            );
+        }
+
         stakedBalance[staker] += amount;
-        _idaLib.distribute(
-            cashToken,
-            INDEX_ID,
-            cashToken.balanceOf(address(this))
-        );
+
+        // receive their SocialToken
+        if (!stakingToken.transferFrom(msg.sender, address(this), amount))
+            revert("Can't stake");
+
         _idaLib.updateSubscriptionUnits(
             cashToken,
             INDEX_ID,
             staker,
-            uint128(stakedBalance[staker])
+            uint128(stakedBalance[staker]) / 1e9
         );
     }
 }
