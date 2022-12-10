@@ -10,8 +10,6 @@ import {IStreamManager} from "./interfaces/IStreamManager.sol";
 import {SocialToken} from "./SocialToken.sol";
 import "forge-std/console.sol";
 
-// TODO: Add `Ownable`?
-// TODO: [Optional] multi tier system.
 contract StreamManager is
     IStreamManager,
     IERC721Mod,
@@ -148,12 +146,6 @@ contract StreamManager is
             CREATOR
         );
 
-        console.log("Staking contract rate: ");
-        console.logInt(stakingContractRate);
-
-        console.log("Creator rate: ");
-        console.logInt(creatorRate);
-
         int96 stakingContractFlowrateDelta = incomingFlowrate / int96(10);
         int96 creatorFlowrateDelta = incomingFlowrate -
             stakingContractFlowrateDelta;
@@ -271,8 +263,6 @@ contract StreamManager is
             int96 creatorFlowrateDelta = oldIncomingFlowrate -
                 stakingContractFlowrateDelta;
 
-            console.log("1");
-
             // Stop a social token stream back to the subscriber.
             _newCtx = CFA_V1.deleteFlowByOperatorWithCtx(
                 _newCtx,
@@ -298,8 +288,6 @@ contract StreamManager is
                 );
             }
 
-            console.log("2");
-
             // Decrease the flowrate to staking contract (10% of the original flowrate).
             if (creatorRate == creatorFlowrateDelta) {
                 _newCtx = CFA_V1.deleteFlowWithCtx(
@@ -316,8 +304,6 @@ contract StreamManager is
                     creatorRate - creatorFlowrateDelta
                 );
             }
-
-            console.log("3");
         }
     }
 }

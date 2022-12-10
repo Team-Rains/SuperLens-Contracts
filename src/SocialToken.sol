@@ -34,4 +34,3 @@ contract SocialToken is SuperTokenBase {
         forwarder.grantPermissions(ISuperToken(address(this)), _streamManager);
     }
 }
-// First this contract is deployed, then Stream manager, then initialize the social token.
